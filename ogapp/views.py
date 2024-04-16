@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from . models import *
+
 
 # Create your views here.
 
@@ -21,6 +23,7 @@ def contact(request):
        print("mobile",mobile)
        print("from",froml)
        print("to",tol)
-
-
+       us = contactus.objects.get_or_create(name=name,email=email,price=price,date=date,mobile=mobile,from_location=froml,to_location=tol)
+       return render(request,'thankyou.html')
+    
     return render(request,'contact.html')
