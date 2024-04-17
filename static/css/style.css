@@ -146,10 +146,10 @@ a {
           right: -100px; } }
     .hero .hero-img-wrap:after {
       content: "";
-      /* position: absolute; */
-      /* width: 255px;
-      height: 217px; */
-      /* background-image: url("../images/dots-light.svg"); */
+      position: absolute; 
+       width: 255px;
+      height: 217px;
+      background-image: url("../images/dots-light.svg");
       background-size: contain;
       background-repeat: no-repeat;
       right: -100px;
@@ -709,3 +709,30 @@ textarea {
     height: 50px;
     border-radius: 50%;
     background: rgba(59, 93, 80, 0.2); }
+    .fixed-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 22px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 60px;
+      cursor: pointer;
+      z-index: 1000; /* High z-index to ensure visibility */
+    }
+    .whatsapp-button {
+      background-color: #25d366;
+      color: white;
+      z-index: 1100; /* Higher z-index than the call button */
+    }
+    html, body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .product-item img{
+      width: 170px;
+    }
