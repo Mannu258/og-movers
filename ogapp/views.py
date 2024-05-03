@@ -25,7 +25,32 @@ def contact(request):
        print("from",froml)
        print("to",tol)
        us = contactus.objects.get_or_create(name=name,email=email,price=price,date=date,mobile=mobile,from_location=froml,to_location=tol)
+                    # <option value="1001">One Bedroom</option>
+                    #   <option value="1002">Two Bedrooms</option>
+                    #   <option value="1003">Three Bedrooms</option>
+                    #   <option value="1004">Four Bedrooms +</option>
+                    #   <option value="1005">Few items</option>
+                    #   <option value="1006">Piano</option>
+                    #   <option value="1007">Pool Table</option>
        try:
+            if price == '1001':
+                price = "One Bedroom"
+            elif price == '1002':
+                price = "Two Bedrooms"
+            elif price == '1003':
+                price = "Three Bedrooms"
+            elif price == '1004':
+                price = "Four Bedrooms"
+            elif price == '1005':
+                price = "Few items "
+            elif price == '1006':
+                price = "Piano"
+            elif price == '1007':
+                price = "Pool Table"
+                
+            
+            
+
             email = EmailMessage(
                 subject='Order Received',
                 body=f"Name:\t{name}\nEmail:\t{email}\nPrice:\t{price}\nDate:\t{date}\nMobile:\t{mobile}\nFrom:\t{froml}\nTo:\t{tol}\n\nRegards,\nOG Movers\n\nContact Us:\nPhone: +1 (123) 456-7890\nEmail: info@ogmovers.com",
