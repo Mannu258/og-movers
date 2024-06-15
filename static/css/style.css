@@ -736,3 +736,11 @@ textarea {
     .product-item img{
       width: 170px;
     }
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+    }
+    

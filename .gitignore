@@ -1,5 +1,7 @@
 ogapp/**/__pycache__/
 ogmovers/**/__pycache__/
+migrations/**/__pycache__/
+
 db.sqlite3
 .venv
 
