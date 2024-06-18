@@ -2,6 +2,7 @@ from django.shortcuts import render
 from . models import *
 import time
 from . email import *
+import threading
 
 # Create your views here.
 
@@ -35,10 +36,14 @@ def contact(request):
             elif price == '1007':
                 price = "Pool Table"
 
-            # Email to yourself
-            send_order_email(name, customer_email, price, date, mobile, froml, tol)
-            time.sleep(5)
-            send_inquiry_email(name, customer_email)
+            order_thread = threading.Thread(target=send_order_email, args=(name, customer_email, price, date, mobile, froml, tol))
+            # inquiry_thread = threading.Thread(target=send_inquiry_email, args=(name, customer_email))
+            
+            order_thread.start()
+            # inquiry_thread.start()
+
+            order_thread.join()
+            # inquiry_thread.join()
 
        except Exception as e:
            print(e)
