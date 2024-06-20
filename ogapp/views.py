@@ -11,7 +11,7 @@ def home(request):
 def contact(request):
     if request.method == "POST":
        name =  request.POST.get('name')
-       customer_email =  request.POST.get('email')  # Changed variable name to customer_email
+       customer_email =  request.POST.get('email')
        price =  request.POST.get('price')
        date =  request.POST.get('date')
        mobile =  request.POST.get('mobile')
@@ -37,13 +37,8 @@ def contact(request):
                 price = "Pool Table"
 
             order_thread = threading.Thread(target=send_order_email, args=(name, customer_email, price, date, mobile, froml, tol))
-            # inquiry_thread = threading.Thread(target=send_inquiry_email, args=(name, customer_email))
             
             order_thread.start()
-            # inquiry_thread.start()
-
-            order_thread.join()
-            # inquiry_thread.join()
 
        except Exception as e:
            print(e)
