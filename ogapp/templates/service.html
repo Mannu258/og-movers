@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'css/tiny-slider.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>OG Movers and Packers</title>
+</head>
+
+<body>
+
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+        <div class="container">
+            <a class="navbar-brand" href="/">OG Movers<span>.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+                aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li><a class="nav-link btn" target="_blank" href="tel:+61434653406">+61 434 653 406</a></li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li><a class="nav-link" href="{% url 'contact' %}">Contact us</a></li>
+                    <li><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+                    <li><a class="nav-link" href="/">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <style>
+            .service-header {
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+
+            .service-description {
+                margin-bottom: 15px;
+            }
+        </style>
+        <div class="container mt-5">
+            <h1 class="font-weight-bold text-center mb-4">Our Services</h1>
+            <p>At OG Movers, we offer a comprehensive range of moving and packing services designed to make your
+                transition as smooth and stress-free as possible. Our team of experienced professionals is dedicated to
+                handling your belongings with the utmost care and efficiency. Below are the services we provide:</p>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Column 1 -->
+                        <div class="service-description">
+                            <div class="service-header">1. Residential Moving</div>
+                            <p>Moving to a new home? Our residential moving services are tailored to meet your specific
+                                needs, whether you're relocating across town or across the country. We ensure that your
+                                possessions are safely and securely transported to your new home.</p>
+                        </div>
+                        <div class="service-description">
+                            <div class="service-header">2. Commercial Moving</div>
+                            <p>Relocating your business? Our commercial moving services minimize downtime and ensure a
+                                seamless transition. We handle everything from office furniture to sensitive equipment,
+                                allowing you to focus on your business.</p>
+                        </div>
+                        <div class="service-description">
+                            <div class="service-header">3. Packing Services</div>
+                            <p>Need help with packing? Our packing services include providing high-quality packing
+                                materials and expert packing techniques to protect your belongings during transit. We
+                                handle everything from delicate items to large furniture.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Column 2 -->
+                        <div class="service-description">
+                            <div class="service-header">4. Loading and Unloading</div>
+                            <p>Short on manpower? Our team can assist with the heavy lifting. We provide professional
+                                loading and unloading services to ensure your items are properly secured and safely
+                                transferred to and from the moving vehicle.</p>
+                        </div>
+                        <div class="service-description">
+                            <div class="service-header">5. Long-Distance Moving</div>
+                            <p>Moving far away? Our long-distance moving services are designed to handle the
+                                complexities of interstate or cross-country relocations. We provide reliable and
+                                efficient transportation to ensure your items arrive on time and in perfect condition.
+                            </p>
+                        </div>
+                        <div class="service-description">
+                            <div class="service-header">6. Specialty Item Moving</div>
+                            <p>Have valuable or fragile items? We specialize in moving delicate and high-value items
+                                such as pianos, antiques, and artwork. Our team uses specialized equipment and
+                                techniques to ensure the safe transport of your precious belongings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+
+    <!-- Start Footer Section -->
+    <footer>
+        <div class="border-top copyright">
+            <div class="row pt-4">
+                <div class="col-lg-6">
+                    <p class="mb-2 text-center text-lg-start">Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>. OG Movers. &mdash;
+                        <!-- License information: https://untree.co/license/ -->
+                    </p>
+                </div>
+
+                <div class="col-lg-6 text-center text-lg-end">
+                    <ul class="list-unstyled d-inline-flex ms-auto">
+                        <li class="me-4"><a href="{% url 'terms' %}">Terms &amp; Conditions</a></li>
+                        <li><a href="{% url 'privacy' %}">Privacy Policy </a></li>
+                        <br>
+                        <a href="https://mandeep.pythonanywhere.com/" class="text-muted m-3">Developer © 2024</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Bootstrap JS and its dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'js/tiny-slider.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-16485596543');
+    </script>
+    <!-- End Google Tag Manager -->
+</body>
+
+</html>
