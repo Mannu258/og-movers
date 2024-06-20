@@ -12,7 +12,8 @@
 	<meta name="keywords" content="bootstrap, bootstrap4" />
 
 	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link href="{% static 'css/tiny-slider.css' %}" rel="stylesheet">
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -21,6 +22,25 @@
 </head>
 
 <body>
+	<style>
+		.container-3d {
+			border: 1px solid #000;
+			box-shadow:
+				0 0 0 4px #6c757d,
+				0 0 0 5px #fff,
+				0 6px 6px 5px rgba(0, 0, 0, 0.5);
+			background-color: #fff;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.container-3d:hover {
+			transform: translateY(-10px);
+			box-shadow:
+				0 16px 16px rgba(0, 0, 0, 0.2),
+				0 0 0 4px #6c757d,
+				0 0 0 5px #fff;
+		}
+	</style>
 
 	<!-- Start Header/Navigation -->
 	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
@@ -50,9 +70,10 @@
 	<!-- End Header/Navigation -->
 
 	<!-- Start Hero Section -->
-	<a href="https://api.whatsapp.com/send?phone=+61434653406&text=Hello%2C%20I%27m%20interested%20in%20your%20services." class="fixed-button whatsapp-button">
+	<a href="https://api.whatsapp.com/send?phone=+61434653406&text=Hello%2C%20I%27m%20interested%20in%20your%20services."
+		class="fixed-button whatsapp-button">
 		<i class="fab fa-whatsapp"></i>
-	  </a>
+	</a>
 	<div class="hero">
 		<div class="container">
 			<div class="row justify-content-between">
@@ -60,8 +81,9 @@
 					<div class="intro-excerpt">
 						<h1>Best removalist in Adelaide<span clsas="d-block"></span></h1>
 						<p class="mb-4">Where Experience Meets Excellence in Relocation Solutions!</p>
-						<p><a href="{% url 'contact' %}" class="btn btn-secondary me-2">Get a Quote</a><a target="_blank" href="tel:+61434653406"
-								class="btn btn-white-outline">Call Us Now</a></p>
+						<p><a href="{% url 'contact' %}" class="btn btn-secondary me-2">Get a Quote</a><a
+								target="_blank" href="tel:+61434653406" class="btn btn-white-outline">Call Us Now</a>
+						</p>
 					</div>
 				</div>
 				<div class="col-lg-7">
@@ -70,15 +92,15 @@
 							<source src= "{% static 'OG Movers and Packers.mp4'%} " type="video/mp4">
 							Your browser does not support HTML5 video.
 						  </video> -->
-						  
+
 						<img he src="{% static 'images/couch.png'%}" class="img-fluid">
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-eafe7237-0678-49ca-87f8-e17291ab2477" data-elfsight-app-lazy></div>
+	<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+	<div class="elfsight-app-eafe7237-0678-49ca-87f8-e17291ab2477" data-elfsight-app-lazy></div>
 
 	<!-- Start Product Section -->
 	<div class="product-section">
@@ -89,14 +111,16 @@
 				<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
 					<h2 class="mb-4 section-title">Specialty in Item Handling</h2>
 					<p class="mb-4">
-						Expert handling of delicate or valuable items such as antiques, pianos, artwork, and electronics. </p>
-					<p><a target="_blank" href="https://api.whatsapp.com/send?phone=+61434653406&text=Hello%2C%20I%27m%20interested%20in%20your%20services."
-						class="btn">Contact Us</a></p>
-				</div>
+						Expert handling of delicate or valuable items such as antiques, pianos, artwork, and
+						electronics. </p>
+					<p><a target="_blank"
+							href="https://api.whatsapp.com/send?phone=+61434653406&text=Hello%2C%20I%27m%20interested%20in%20your%20services."
+							class="btn">Contact Us</a></p>
+				</div><br>
 				<!-- End Column 1 -->
 
 				<!-- Start Column 2 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 border">
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 border border-2 container-3d">
 					<a class="product-item" href="{% url 'contact' %}">
 						<img src="{% static 'images/product-1.png' %}" class="img-fluid product-thumbnail">
 						<h3 class="product-title">
@@ -104,7 +128,8 @@
 							<p>5 ton truck: 26 cubic meters</p>
 							<p>2 Movers</p>
 							<p>Fully Insured</p>
-							<p>South Australia</p></h3>
+							<p>South Australia</p>
+						</h3>
 
 						<strong class="product-price">$99/Hour</strong>
 
@@ -116,14 +141,16 @@
 				<!-- End Column 2 -->
 
 				<!-- Start Column 3 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 border">
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 border border-2 container-3d">
 					<a class="product-item" href="{% url 'contact' %}">
 						<img src="{% static 'images/product-2.png'%}" class="img-fluid product-thumbnail">
-						<h3 class="product-title"><p>Suitable for 1-3 Bedrooms</p>
+						<h3 class="product-title">
+							<p>Suitable for 1-3 Bedrooms</p>
 							<p>5 ton truck: 26 cubic meters</p>
 							<p>2 Movers</p>
 							<p>Fully Insured</p>
-							<p>South Australia</p></h3>
+							<p>South Australia</p>
+						</h3>
 						<strong class="product-price">$110/Hour</strong>
 
 						<span class="icon-cross">
@@ -134,14 +161,16 @@
 				<!-- End Column 3 -->
 
 				<!-- Start Column 4 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 border">
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 border border-2 container-3d">
 					<a class="product-item" href="{% url 'contact' %}">
 						<img src="{% static 'images/product-3.png' %}" class="img-fluid product-thumbnail">
-						<h3 class="product-title"><p>Suitable for 2-4 Bedrooms</p>
+						<h3 class="product-title">
+							<p>Suitable for 2-4 Bedrooms</p>
 							<p>5 ton truck: 26 cubic meters</p>
 							<p>2 Movers</p>
 							<p>Fully Insured</p>
-							<p>South Australia</p></h3>
+							<p>South Australia</p>
+						</h3>
 						<strong class="product-price">$169/Hour</strong>
 
 						<span class="icon-cross">
@@ -162,7 +191,8 @@
 			<div class="row justify-content-between">
 				<div class="col-lg-6">
 					<h2 class="section-title">Why Choose Us</h2>
-					<p>We're dedicated to seamless transitions, offering top-notch moving services with a focus on trust, professionalism, and customer satisfaction. Your journey, our priority</p>
+					<p>We're dedicated to seamless transitions, offering top-notch moving services with a focus on
+						trust, professionalism, and customer satisfaction. Your journey, our priority</p>
 
 					<div class="row my-5">
 						<div class="col-6 col-md-6">
@@ -171,7 +201,8 @@
 									<img src="{% static 'images/truck.svg' %}" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Fast &amp; Residanial Moving</h3>
-								<p>Complete relocation assistance for households, ensuring a smooth transition to a new home.</p>
+								<p>Complete relocation assistance for households, ensuring a smooth transition to a new
+									home.</p>
 							</div>
 						</div>
 
@@ -181,7 +212,8 @@
 									<img src="{% static 'images/building-fill.svg'%}" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Commercial Moving:</h3>
-								<p>Efficient and organized moving services for businesses, offices, and commercial establishments.</p>
+								<p>Efficient and organized moving services for businesses, offices, and commercial
+									establishments.</p>
 							</div>
 						</div>
 
@@ -191,7 +223,8 @@
 									<img src="{% static 'images/box.svg'%}" class="imf-fluid">
 								</div>
 								<h3>Packing Services</h3>
-								<p>Professional packing of belongings using high-quality materials to ensure their safety during transportation.</p>
+								<p>Professional packing of belongings using high-quality materials to ensure their
+									safety during transportation.</p>
 							</div>
 						</div>
 
@@ -201,7 +234,8 @@
 									<img src="{% static 'images/truck-front-fill.svg'%}" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Loading and Unloading:</h3>
-								<p>Skillful loading and unloading of items onto trucks or vans, handled with care to prevent damage..</p>
+								<p>Skillful loading and unloading of items onto trucks or vans, handled with care to
+									prevent damage..</p>
 							</div>
 						</div>
 
@@ -232,11 +266,19 @@
 				</div>
 				<div class="col-lg-5 ps-lg-5">
 					<h2 class="section-title mb-4">Our Vision & Mission</h2>
-					<p>OGMovers envisions a seamless world of transitions where relocation is a stress-free experience. Our mission is to redefine moving through innovation, reliability, and customer-centric solutions. We aim to set industry benchmarks, prioritizing client satisfaction and sustainability. Committed to excellence, we strive to be the preferred choice for individuals and businesses alike, fostering a global community linked by efficient and ethical moving practices. OGMovers seeks to inspire confidence, making every move a step toward a brighter, more connected future.</p>
+					<p>OGMovers envisions a seamless world of transitions where relocation is a stress-free experience.
+						Our mission is to redefine moving through innovation, reliability, and customer-centric
+						solutions. We aim to set industry benchmarks, prioritizing client satisfaction and
+						sustainability. Committed to excellence, we strive to be the preferred choice for individuals
+						and businesses alike, fostering a global community linked by efficient and ethical moving
+						practices. OGMovers seeks to inspire confidence, making every move a step toward a brighter,
+						more connected future.</p>
 
 
 					<ul class="list-unstyled custom-list my-4">
-						<h2 class="section-title mb-4">&nbsp;&nbsp;&nbsp;&nbsp;<span>Vision</span><span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Mission</span></h2>
+						<h2 class="section-title mb-4">
+							&nbsp;&nbsp;&nbsp;&nbsp;<span>Vision</span><span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Mission</span>
+						</h2>
 
 						<li><b>Empowering Transitions</b></li>&nbsp;&nbsp;&nbsp;&nbsp;
 						<li><b>Setting Industry Standards</b> </li>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -264,7 +306,8 @@
 						</div>
 						<div class="pt-3">
 							<h3>Packing Supplies</h3>
-							<p>Provision of packing materials such as boxes, tape, bubble wrap, and labels for DIY packing or additional protection. </p>
+							<p>Provision of packing materials such as boxes, tape, bubble wrap, and labels for DIY
+								packing or additional protection. </p>
 							<p><a href="#">Read More</a></p>
 						</div>
 					</div>
@@ -277,7 +320,8 @@
 						</div>
 						<div class="pt-3">
 							<h3>Local Moving</h3>
-							<p>Relocation services within the same city or area, tailored to meet the specific needs of local moves. </p>
+							<p>Relocation services within the same city or area, tailored to meet the specific needs of
+								local moves. </p>
 							<p><a href="#">Read More</a></p>
 						</div>
 					</div>
@@ -290,7 +334,9 @@
 						</div>
 						<div class="pt-3">
 							<h3>Specialized Equipment</h3>
-							<p>We utilize specialized equipment such as piano dollies, straps, and padding to securely lift and transport pianos without causing damage to the instrument or surrounding property. </p>
+							<p>We utilize specialized equipment such as piano dollies, straps, and padding to securely
+								lift and transport pianos without causing damage to the instrument or surrounding
+								property. </p>
 							<p><a href="#">Read More</a></p>
 						</div>
 					</div>
@@ -327,7 +373,14 @@
 
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
-												<p>&ldquo;I recently hired OG Movers to move my grandmother's antique piano, which has been in our family for generations. I was nervous about trusting anyone with such a precious heirloom, but the team at OG Movers exceeded all my expectations. They treated the piano with such reverence and respect, and I could tell they understood its sentimental value. Thanks to them, the piano arrived at its new home safely and intact. I can't thank them enough for their exceptional service..&rdquo;</p>
+												<p>&ldquo;I recently hired OG Movers to move my grandmother's antique
+													piano, which has been in our family for generations. I was nervous
+													about trusting anyone with such a precious heirloom, but the team at
+													OG Movers exceeded all my expectations. They treated the piano with
+													such reverence and respect, and I could tell they understood its
+													sentimental value. Thanks to them, the piano arrived at its new home
+													safely and intact. I can't thank them enough for their exceptional
+													service..&rdquo;</p>
 											</blockquote>
 
 											<div class="author-info">
@@ -350,7 +403,12 @@
 
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
-												<p>&ldquo;Moving a piano can be a stressful experience, but thanks to OG Movers, it was completely hassle-free. From the moment I contacted them, I knew I was in good hands. The team arrived on time, handled my piano with the utmost care, and delivered it to my new home without a scratch. I'm so grateful for their professionalism and attention to detail..&rdquo;</p>
+												<p>&ldquo;Moving a piano can be a stressful experience, but thanks to OG
+													Movers, it was completely hassle-free. From the moment I contacted
+													them, I knew I was in good hands. The team arrived on time, handled
+													my piano with the utmost care, and delivered it to my new home
+													without a scratch. I'm so grateful for their professionalism and
+													attention to detail..&rdquo;</p>
 											</blockquote>
 
 											<div class="author-info">
@@ -373,7 +431,11 @@
 
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
-												<p>&ldquo; was incredibly impressed with the professionalism and expertise of the team at OG Movers. They moved my piano with such care and precision, it was clear they knew exactly what they were doing. I couldn't be happier with the service, and I highly recommend them to anyone in need of piano moving!.&rdquo;</p>
+												<p>&ldquo; was incredibly impressed with the professionalism and
+													expertise of the team at OG Movers. They moved my piano with such
+													care and precision, it was clear they knew exactly what they were
+													doing. I couldn't be happier with the service, and I highly
+													recommend them to anyone in need of piano moving!.&rdquo;</p>
 											</blockquote>
 
 											<div class="author-info">
@@ -456,13 +518,16 @@
 			</div>
 			<div class="row g-5 mb-5">
 				<div class="col-lg-4">
-					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Elevating Relocation Experiences with Expertise and Care!<span>.</span></a></div>
-					<p class="mb-4">Comprehensive and tailored services for a hassle-free move. From packing to delivery, OGMovers ensures a seamless transition with care and efficiency.</p>
+					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Elevating Relocation Experiences
+							with Expertise and Care!<span>.</span></a></div>
+					<p class="mb-4">Comprehensive and tailored services for a hassle-free move. From packing to
+						delivery, OGMovers ensures a seamless transition with care and efficiency.</p>
 
 					<ul class="list-unstyled custom-social">
 						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
 						<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-						<li><a href="https://www.instagram.com/ogmovers/" target="_blank"><span class="fa fa-brands fa-instagram"></span></a></li>
+						<li><a href="https://www.instagram.com/ogmovers/" target="_blank"><span
+									class="fa fa-brands fa-instagram"></span></a></li>
 						<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
 					</ul>
 				</div>
@@ -474,7 +539,10 @@
 								<li><a href="#">About us</a></li>
 								<li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
 								<li><a href="{% url 'contact' %}">Contact us</a></li>
-								<li><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59644446.984194264!2d91.5130743!3d-24.157415!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa20ad3b42d0d0245%3A0x3f36b978203408ab!2sOG%20Movers!5e0!3m2!1sen!2sin!4v1714326969689!5m2!1sen!2sin" width="340" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+								<li><iframe
+										src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59644446.984194264!2d91.5130743!3d-24.157415!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa20ad3b42d0d0245%3A0x3f36b978203408ab!2sOG%20Movers!5e0!3m2!1sen!2sin!4v1714326969689!5m2!1sen!2sin"
+										width="340" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+										referrerpolicy="no-referrer-when-downgrade"></iframe></li>
 								<!--<li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509577!2d144.95373531544364!3d-37.817209979751984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0c93b70926705%3A0x1c033657a35104f0!2sAdelaide+SA+5000,+Australia!5e0!3m2!1sen!2sau!4v1630291924470!5m2!1sen!2sau" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
 								</li>
 							</ul>
@@ -501,7 +569,7 @@
 						<ul class="list-unstyled d-inline-flex ms-auto">
 							<li class="me-4"><a href="{% url 'terms' %}">Terms &amp; Conditions</a></li>
 							<li><a href="{% url 'privacy' %}">Privacy Policy </a></li><br>
-							    <a href="https://mandeep.pythonanywhere.com/" class="text-muted m-3">Developer © 2024</a>
+							<a href="https://mandeep.pythonanywhere.com/" class="text-muted m-3">Developer © 2024</a>
 
 						</ul>
 					</div>
@@ -512,13 +580,13 @@
 		</div>
 	</footer>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485596543"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-  gtag('config', 'AW-16485596543');
-</script>
+		gtag('config', 'AW-16485596543');
+	</script>
 	<!-- End Footer Section -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -528,7 +596,9 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 	<script src="{% static 'js/tiny-slider.js' %}"></script>
 	<script src="{% static 'js/custom.js' %}"></script>
 </body>
