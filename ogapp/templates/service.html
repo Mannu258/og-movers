@@ -55,7 +55,27 @@
             .service-description {
                 margin-bottom: 15px;
             }
+
+            .video-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         </style>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <!-- Video container -->
+                    <div class="video-container text-center">
+                        <video width="100%" height="auto" controls>
+                            <source src="{% static 'OG Movers and Packers.mp4' %}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container mt-5">
             <h1 class="font-weight-bold text-center mb-4">Our Services</h1>
             <p>At OG Movers, we offer a comprehensive range of moving and packing services designed to make your
