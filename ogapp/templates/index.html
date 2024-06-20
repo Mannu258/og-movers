@@ -24,7 +24,10 @@
 <body>
 	<style>
 		.container-3d {
-			border: 1px solid #000;
+			border: 3px solid #000;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			background-color: #fff;
+			/* Background color for the content */
 		}
 	</style>
 
@@ -106,7 +109,7 @@
 				<!-- End Column 1 -->
 
 				<!-- Start Column 2 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 border border-2 container-3d">
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 container-3d">
 					<a class="product-item" href="{% url 'contact' %}">
 						<img src="{% static 'images/product-1.png' %}" class="img-fluid product-thumbnail">
 						<h3 class="product-title">
@@ -127,7 +130,7 @@
 				<!-- End Column 2 -->
 
 				<!-- Start Column 3 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 border border-2 container-3d">
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 container-3d">
 					<a class="product-item" href="{% url 'contact' %}">
 						<img src="{% static 'images/product-2.png'%}" class="img-fluid product-thumbnail">
 						<h3 class="product-title">
@@ -147,7 +150,7 @@
 				<!-- End Column 3 -->
 
 				<!-- Start Column 4 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 border border-2 container-3d">
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 container-3d">
 					<a class="product-item" href="{% url 'contact' %}">
 						<img src="{% static 'images/product-3.png' %}" class="img-fluid product-thumbnail">
 						<h3 class="product-title">
