@@ -56,12 +56,9 @@
 		</div>
 
 	</nav>
-	<!-- End Header/Navigation -->
-
-	<!-- Start Hero Section -->
-	<a href="https://api.whatsapp.com/send?phone=+61434653406&text=Hello%2C%20I%27m%20interested%20in%20your%20services."
+	<a href="tel:+61434653406"
 		class="fixed-button whatsapp-button">
-		<i class="fab fa-whatsapp"></i>
+		<i class="bi bi-telephone-fill"></i>
 	</a>
 	<div class="hero">
 		<div class="container">
@@ -69,7 +66,7 @@
 				<div class="col-lg-5">
 					<div class="intro-excerpt">
 						<h1>Best removalist in Adelaide<span clsas="d-block"></span></h1>
-						<p class="mb-4">Where Experience Meets Excellence in Relocation Solutions!</p>
+						<p style="color: #fff;" class="mb-4">Where Experience Meets Excellence in Relocation Solutions!</p>
 						<p><a href="{% url 'contact' %}" class="btn btn-secondary me-2">Get a Quote</a><a
 								target="_blank" href="tel:+61434653406" class="btn btn-white-outline">Call Us Now</a>
 						</p>
@@ -92,6 +89,103 @@
 	<div class="elfsight-app-eafe7237-0678-49ca-87f8-e17291ab2477" data-elfsight-app-lazy></div>
 
 	<!-- Start Product Section -->
+	<div class="untree_co-section">
+		<div class="container">
+
+			<div class="block">
+				<div class="row justify-content-center">
+
+
+					<div class="col-md-8 col-lg-8 pb-4">
+						<div class="col-lg-7">
+							<div class="hero-img-wrap">
+
+								<img he src="{% static 'images/image.png'%}" class="img-fluid">
+							</div>
+						</div>
+						<h1 style="color: #000;">Get a Quote for Free</h1>
+
+						<form method="POST">
+
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="fname">Name</label>
+										<input name="name" type="text" class="form-control" id="fname"
+											placeholder="Your Name" required>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="lname">Number</label>
+										<input name="mobile" type="number" class="form-control" id="lname"
+											placeholder="eg.+61 123 456 789" required>
+									</div>
+								</div>
+							</div>
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="fname">From Location</label>
+										<input type="text" name="froml" class="form-control" id="fname"
+											placeholder="From Location" required>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="lname">To location</label>
+										<input type="text" name="tol" class="form-control" id="lname"
+											placeholder="To Location" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="fname">Price</label>
+										<select class="form-select" name="price" aria-label="Default select example"
+											required>
+											<option value="1001">One Bedroom</option>
+											<option value="1002">Two Bedrooms</option>
+											<option value="1003">Three Bedrooms</option>
+											<option value="1004">Four Bedrooms +</option>
+											<option value="1005">Few items</option>
+											<option value="1006">Piano</option>
+											<option value="1007">Pool Table</option>
+
+
+										</select>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" name="date" for="date">Date</label>
+										<input type="date" name="date" class="form-control" id="date" required>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="text-black" for="email">Email address</label>
+								<input type="email" name="email" class="form-control" id="email"
+									placeholder="Your@email.com" required>
+							</div>
+
+							<button type="submit" class="btn btn-primary-hover-outline m-3 md-4">Get a Quote</button>
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+	</div>
 	<div class="product-section">
 		<div class="container">
 			<div class="row">
@@ -106,69 +200,91 @@
 							href="https://api.whatsapp.com/send?phone=+61434653406&text=Hello%2C%20I%27m%20interested%20in%20your%20services."
 							class="btn">Contact Us</a></p>
 				</div><br>
-				<!-- End Column 1 -->
-
-				<!-- Start Column 2 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 container-3d">
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="{% url 'contact' %}">
-						<img src="{% static 'images/product-1.png' %}" class="img-fluid product-thumbnail">
-						<h3 class="product-title">
-							<p>Suitable: 1-2 Bedrooms</p>
-							<p>5 ton truck: 26 cubic meters</p>
-							<p>2 Movers</p>
-							<p>Fully Insured</p>
-							<p>South Australia</p>
-						</h3>
-
-						<strong class="product-price">$99/Hour</strong>
-
-						<span class="icon-cross">
-							<img src="{% static 'images/cross.svg' %}" class="img-fluid">
-						</span>
+						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
+							<div class="service-logos">
+								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="service-logo">
+							</div>
+							
+							<div class="service-price-info">
+								
+								<strong>$99 </strong><span>per hour</span>
+							</div>
+							<div class="service-body">
+								<p>Suitable for 1 Bedroom <br> apartment </p>
+								<p>4.5 Ton truck</p>
+								<p>2X Movers</p>
+								<p>Fully Insured</p>
+								<p>Scratch Proof Wrapping</p>
+								<p>Special care for expensive and fragile items	</p>
+								<p>Assistance with Assembly and  Disassembly</p>
+							</div> 
+							<div class="service-footer">
+								<a href="{% url 'contact' %}" class="btn-book-now">Book Now</a>
+							</div>
+						</div>
 					</a>
 				</div>
-				<!-- End Column 2 -->
-
-				<!-- Start Column 3 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 container-3d">
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="{% url 'contact' %}">
-						<img src="{% static 'images/product-2.png'%}" class="img-fluid product-thumbnail">
-						<h3 class="product-title">
-							<p>Suitable for 1-3 Bedrooms</p>
-							<p>5 ton truck: 26 cubic meters</p>
-							<p>2 Movers</p>
-							<p>Fully Insured</p>
-							<p>South Australia</p>
-						</h3>
-						<strong class="product-price">$110/Hour</strong>
+						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
+							<div class="service-logos">
+								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="service-logo">
+								<img src="{% static 'images/person.png' %}" alt="Logo 2" class="service-logo">
+							</div>
+							
+							<div class="service-price-info">
+								<strong>$110 </strong><span>per hour</span>
+							</div>
+							<div class="service-body">
+								<p>Suitable for 1-3 Bedrooms apartment</p>
+								<p>5 Ton Truck</p>
+								<p>2X Movers</p>
+								<p>Fully Insured</p>
+								<p>Scratch Proof Wrapping</p>
+								<p>Special care for expensive and fragile items	</p>
+								<p>Assistance with Assembly and  Disassembly</p>
+							</div>
+							<div class="service-footer">
+								<a href="{% url 'contact' %}" class="btn-book-now">Book Now</a>
 
-						<span class="icon-cross">
-							<img id="dollor" src="{% static 'images/cross.svg' %}" class="img-fluid">
-						</span>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 ">
+					<a class="product-item" href="{% url 'contact' %}">
+						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
+							<div class="service-logos">
+								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="service-logo">
+								<img src="{% static 'images/person.png' %}" alt="Logo 2" class="service-logo">
+								<img src="{% static 'images/person.png' %}" alt="Logo 2" class="service-logo">
+
+							</div>
+							
+							<div class="service-price-info">
+								
+								<strong>$169 </strong><span>per hour</span>
+							</div>
+							<div class="service-body">
+								<p>Suitable for Studio or 2-4 Bedrooms apartment</p>
+								<p>8.5 Ton Truck</p>
+								<p>2X Movers</p>
+								<p>Fully Insured</p>
+								<p>Scratch Proof Wrapping</p>
+								<p>Special care for expensive and fragile items	</p>
+								<p>Assistance with Assembly and  Disassembly</p>
+							</div>
+							<div class="service-footer">
+								<a href="{% url 'contact' %}" class="btn-book-now">Book Now</a>
+							</div>
+						</div>
+
 					</a>
 				</div>
-				<!-- End Column 3 -->
-
-				<!-- Start Column 4 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 container-3d">
-					<a class="product-item" href="{% url 'contact' %}">
-						<img src="{% static 'images/product-3.png' %}" class="img-fluid product-thumbnail">
-						<h3 class="product-title">
-							<p>Suitable for 2-4 Bedrooms</p>
-							<p>5 ton truck: 26 cubic meters</p>
-							<p>2 Movers</p>
-							<p>Fully Insured</p>
-							<p>South Australia</p>
-						</h3>
-						<strong class="product-price">$169/Hour</strong>
-
-						<span class="icon-cross">
-							<img id="dollor" src="{% static 'images/cross.svg'%}" class="img-fluid">
-						</span>
-					</a>
-				</div>
-				<!-- End Column 4 -->
-
 			</div>
 		</div>
 	</div>
@@ -189,7 +305,7 @@
 								<div class="icon">
 									<img src="{% static 'images/truck.svg' %}" alt="Image" class="imf-fluid">
 								</div>
-								<h3>Fast &amp; Residanial Moving</h3>
+								<h3>Fast &amp; Residential Moving</h3>
 								<p>Complete relocation assistance for households, ensuring a smooth transition to a new
 									home.</p>
 							</div>
@@ -269,14 +385,14 @@
 							&nbsp;&nbsp;&nbsp;&nbsp;<span>Vision</span><span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Mission</span>
 						</h2>
 
-						<li><b>Empowering Transitions</b></li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li><b>Customer Satisfaction</b></li>&nbsp;&nbsp;&nbsp;&nbsp;
 						<li><b>Setting Industry Standards</b> </li>&nbsp;&nbsp;&nbsp;&nbsp;
 
 						<li><b>Customer Centric Excellence </b></li>&nbsp;&nbsp;&nbsp;&nbsp;
 						<li><b>Reliability and Trust </b></li>&nbsp;&nbsp;&nbsp;&nbsp;
 					</ul>
 
-					<p><a herf="#" class="btn">Explore</a></p>
+					<p><a herf="{% url 'service' %}" class="btn">Explore</a></p>
 				</div>
 			</div>
 		</div>
@@ -297,7 +413,7 @@
 							<h3>Packing Supplies</h3>
 							<p>Provision of packing materials such as boxes, tape, bubble wrap, and labels for DIY
 								packing or additional protection. </p>
-							<p><a href="#">Read More</a></p>
+							<p><a href="{% url 'service' %}">Read More</a></p>
 						</div>
 					</div>
 				</div>
@@ -311,7 +427,7 @@
 							<h3>Local Moving</h3>
 							<p>Relocation services within the same city or area, tailored to meet the specific needs of
 								local moves. </p>
-							<p><a href="#">Read More</a></p>
+							<p><a href="{% url 'service' %}">Read More</a></p>
 						</div>
 					</div>
 				</div>
@@ -326,7 +442,7 @@
 							<p>We utilize specialized equipment such as piano dollies, straps, and padding to securely
 								lift and transport pianos without causing damage to the instrument or surrounding
 								property. </p>
-							<p><a href="#">Read More</a></p>
+							<p><a href="{% url 'service' %}">Read More</a></p>
 						</div>
 					</div>
 				</div>
@@ -447,7 +563,70 @@
 			</div>
 		</div>
 	</div>
-	<!-- End Testimonial Slider -->
+
+	<style>
+		.carousel-inner img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+
+		}
+
+
+		@media (max-width: 768px) {
+			.carousel-inner img {
+				height: 200px;
+
+			}
+		}
+
+
+		@media (max-width: 480px) {
+			.carousel-inner img {
+				height: 150px;
+
+			}
+		}
+
+		.carousel {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+
+
+
+	<div class="container">
+		<div id="carouselExample" class="carousel slide" style="margin: auto;">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="{% static 'images/cross1.png'%}" class="d-block" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="{% static 'images/cross2.png'%}" class="d-block" alt="...">
+
+				</div>
+				<div class="carousel-item">
+					<img src="{% static 'images/cross3.png'%}" class="d-block" alt="...">
+
+				</div>
+				<div class="carousel-item">
+					<img src="{% static 'images/cross4.png'%}" class="d-block" alt="...">
+
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+
 
 	<!-- Start Blog Section -->
 	<div class="blog-section">
@@ -494,6 +673,22 @@
 			</div>
 		</div>
 	</div>
+	<div class="container mt-5">
+		<h2>Our Services</h2>
+		<p>We offer packing, transportation, unpacking, and storage solutions tailored to your needs.</p>
+
+		<h2>Moving Costs</h2>
+		<p>Costs depend on factors like distance, volume, and additional services requested.</p>
+
+		<h2>Insurance</h2>
+		<p>Yes, basic insurance is included with options for additional coverage.</p>
+
+		<h2>Booking</h2>
+		<p>Book as early as possible, especially during peak seasons, to secure your preferred dates.</p>
+
+		<h2>Local and Long-Distance Moves</h2>
+		<p>Yes, we provide both local and long-distance moving services to accommodate various relocation needs.</p>
+	</div>
 	<!-- End Blog Section -->
 
 	<!-- Start Footer Section -->
@@ -507,10 +702,16 @@
 			</div>
 			<div class="row g-5 mb-5">
 				<div class="col-lg-4">
+
 					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Elevating Relocation Experiences
 							with Expertise and Care!<span>.</span></a></div>
-					<p class="mb-4">Comprehensive and tailored services for a hassle-free move. From packing to
-						delivery, OGMovers ensures a seamless transition with care and efficiency.</p>
+					<p class="mb-4">At OG Movers, we are dedicated to making your move as smooth and stress-free as
+						possible. With years of experience in the moving industry, we pride ourselves on reliability,
+						professionalism, and exceptional customer service. Whether you're moving across town or across
+						the country, our team of skilled movers is committed to handling your belongings with care and
+						ensuring a seamless transition to your new home or office. From packing and transportation to
+						unpacking and setup, we offer a full range of moving services tailored to meet your unique
+						needs. Trust OG Movers to deliver quality service and peace of mind for your next move..</p>
 
 					<ul class="list-unstyled custom-social">
 						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
