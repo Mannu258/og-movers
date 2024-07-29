@@ -89,7 +89,37 @@
 	<div class="elfsight-app-eafe7237-0678-49ca-87f8-e17291ab2477" data-elfsight-app-lazy></div>
 
 	<!-- Start Product Section -->
-	<div class="untree_co-section">
+	<style>
+		.my-element {
+			border: 2px solid #ccc;
+			/* Light grey border */
+			box-shadow: 3px 0 5px #aaa, -3px 0 5px #aaa;
+			/* 3D effect with left and right shadows */
+			padding: 10px;
+			/* Space inside the border */
+			background-color: #f9f9f9;
+			/* Light background color */
+		}
+
+		/* Adjustments for mobile devices */
+		@media (max-width: 600px) {
+			.my-element {
+				box-shadow: 2px 0 4px #aaa, -2px 0 4px #aaa;
+				/* Smaller shadow for smaller screens */
+				padding: 8px;
+				/* Adjust padding for smaller screens */
+			}
+		}
+
+		.service-body p {
+			margin-bottom: -0.5rem;
+		}
+
+		.img-fluid {
+			padding-left: -20px;
+		}
+	</style>
+	<div class="untree_co-section ">
 		<div class="container">
 
 			<div class="block">
@@ -103,76 +133,80 @@
 								<img he src="{% static 'images/image.png'%}" class="img-fluid">
 							</div>
 						</div>
-						<h1 style="color: #000;">Get a Quote for Free</h1>
 
 						<form method="POST">
+							<div class="my-element">
+								<h1 style="color: #000;">Get a Quote for Free</h1>
 
-							<div class="row">
-								<div class="col-6">
-									<div class="form-group">
-										<label class="text-black" for="fname">Name</label>
-										<input name="name" type="text" class="form-control" id="fname"
-											placeholder="Your Name" required>
+
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<label class="text-black" for="fname">Name</label>
+											<input name="name" type="text" class="form-control" id="fname"
+												placeholder="Your Name" required>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<label class="text-black" for="lname">Number</label>
+											<input name="mobile" type="number" class="form-control" id="lname"
+												placeholder="eg.+61 123 456 789" required>
+										</div>
 									</div>
 								</div>
-								<div class="col-6">
-									<div class="form-group">
-										<label class="text-black" for="lname">Number</label>
-										<input name="mobile" type="number" class="form-control" id="lname"
-											placeholder="eg.+61 123 456 789" required>
+								{% csrf_token %}
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<label class="text-black" for="fname">From Location</label>
+											<input type="text" name="froml" class="form-control" id="fname"
+												placeholder="From Location" required>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<label class="text-black" for="lname">To location</label>
+											<input type="text" name="tol" class="form-control" id="lname"
+												placeholder="To Location" required>
+										</div>
 									</div>
 								</div>
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<label class="text-black" for="fname">Price</label>
+											<select class="form-select" name="price" aria-label="Default select example"
+												required>
+												<option value="1001">One Bedroom</option>
+												<option value="1002">Two Bedrooms</option>
+												<option value="1003">Three Bedrooms</option>
+												<option value="1004">Four Bedrooms +</option>
+												<option value="1005">Few items</option>
+												<option value="1006">Piano</option>
+												<option value="1007">Pool Table</option>
+
+
+											</select>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<label class="text-black" name="date" for="date">Date</label>
+											<input type="date" name="date" class="form-control" id="date" required>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="text-black" for="email">Email address</label>
+									<input type="email" name="email" class="form-control" id="email"
+										placeholder="Your@email.com" required>
+								</div>
+
+								<button type="submit" class="btn btn-primary-hover-outline m-3 md-4">Get a
+									Quote</button>
 							</div>
-							{% csrf_token %}
-							<div class="row">
-								<div class="col-6">
-									<div class="form-group">
-										<label class="text-black" for="fname">From Location</label>
-										<input type="text" name="froml" class="form-control" id="fname"
-											placeholder="From Location" required>
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="form-group">
-										<label class="text-black" for="lname">To location</label>
-										<input type="text" name="tol" class="form-control" id="lname"
-											placeholder="To Location" required>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-6">
-									<div class="form-group">
-										<label class="text-black" for="fname">Price</label>
-										<select class="form-select" name="price" aria-label="Default select example"
-											required>
-											<option value="1001">One Bedroom</option>
-											<option value="1002">Two Bedrooms</option>
-											<option value="1003">Three Bedrooms</option>
-											<option value="1004">Four Bedrooms +</option>
-											<option value="1005">Few items</option>
-											<option value="1006">Piano</option>
-											<option value="1007">Pool Table</option>
-
-
-										</select>
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="form-group">
-										<label class="text-black" name="date" for="date">Date</label>
-										<input type="date" name="date" class="form-control" id="date" required>
-									</div>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label class="text-black" for="email">Email address</label>
-								<input type="email" name="email" class="form-control" id="email"
-									placeholder="Your@email.com" required>
-							</div>
-
-							<button type="submit" class="btn btn-primary-hover-outline m-3 md-4">Get a Quote</button>
 						</form>
 
 					</div>
@@ -205,6 +239,8 @@
 						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
 							<div class="service-logos">
 								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="service-logo">
+								<img src="{% static 'images/person.png' %}" alt="Logo 2" class="service-logo">
+
 							</div>
 
 							<div class="service-price-info">
@@ -261,7 +297,6 @@
 							<div class="service-logos">
 								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="service-logo">
 								<img src="{% static 'images/person.png' %}" alt="Logo 2" class="service-logo">
-								<img src="{% static 'images/person.png' %}" alt="Logo 2" class="service-logo">
 
 							</div>
 
@@ -284,10 +319,48 @@
 						</div>
 
 					</a>
+
 				</div>
+				<div id="dlr">
+					<img class="responsive-imagess" src="{% static 'images/dollor.png' %}" alt="">
+				</div>
+
+				<style>
+					/* Set a maximum width for the image */
+					#dlr {
+						margin: -60;
+						padding: -60;
+						height: 500px;
+						width: 100%;
+						/* Adjust to fill the available width */
+						text-align: center;
+						display: flex;
+						justify-content: center;
+						/* Center horizontally */
+						align-items: center;
+						/* Center vertically */
+					}
+
+					/* Responsive image */
+					.responsive-imagess {
+						max-width: 100%;
+						height: auto;
+					}
+
+					/* Adjustments for larger screens */
+					@media (min-width: 1024px) {
+						.responsive-imagess {
+							max-width: 50%;
+							/* Adjust this value as needed */
+						}
+					}
+				</style>
+
 			</div>
+
 		</div>
 	</div>
+
 	<!-- End Product Section -->
 
 	<!-- Start Why Choose Us Section -->
@@ -674,19 +747,19 @@
 		</div>
 	</div>
 	<div class="container mt-5">
-		<h2>Our Services</h2>
+		<a href="service"><h2>Our Services</h2></a>
 		<p>We offer packing, transportation, unpacking, and storage solutions tailored to your needs.</p>
 
-		<h2>Moving Costs</h2>
+		<a href="service"><h2>Moving Costs</h2></a>
 		<p>Costs depend on factors like distance, volume, and additional services requested.</p>
 
-		<h2>Insurance</h2>
+		<a href="service"><h2>Insurance</h2></a>
 		<p>Yes, basic insurance is included with options for additional coverage.</p>
 
-		<h2>Booking</h2>
+		<a href="service"><h2>Booking</h2></a>
 		<p>Book as early as possible, especially during peak seasons, to secure your preferred dates.</p>
 
-		<h2>Local and Long-Distance Moves</h2>
+		<a href="service"><h2>Local and Long-Distance Moves</h2></a>
 		<p>Yes, we provide both local and long-distance moving services to accommodate various relocation needs.</p>
 	</div>
 	<!-- End Blog Section -->
