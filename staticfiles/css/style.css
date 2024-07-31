@@ -1053,7 +1053,7 @@ body {
 }
 
 .product-item img {
-  width: 60px;
+  width: 150px;
 }
 
 #myVideo {
@@ -1097,13 +1097,13 @@ body {
 
 .service-logos {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
   margin-bottom: 10px;
 }
 
 .service-logo {
-  width: 20%;
+  width: 10%;
   max-height: 81px;
   /* Adjust the height as needed */
 }

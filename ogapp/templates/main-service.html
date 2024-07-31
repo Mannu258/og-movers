@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'css/tiny-slider.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>OG Movers and Packers</title>
+</head>
+
+<body>
+    <a href="tel:+61434653406" class="fixed-button whatsapp-button">
+        <i class="bi bi-telephone-fill"></i></a>
+
+        <!-- Start Header/Navigation -->
+        <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
+            arial-label="Furni navigation bar">
+            <div class="container">
+                <a class="navbar-brand" href="/">OG Movers<span>.</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+                    aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsFurni">
+                    <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                        <li><a class="nav-link btn" target="_blank" href="tel:+61434653406">+61 434 653 406</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li><a class="nav-link" href="{% url 'contact' %}">Contact us</a></li>
+                        <li><a class="nav-link active" href="{% url 'service' %}">Services</a></li>
+                        <li><a class="nav-link" href="/">About us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <style>
+            .service-header {
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+
+            .service-description {
+                margin-bottom: 15px;
+            }
+
+            .video-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .faq-container {
+                margin: auto;
+                padding: 1rem;
+                max-width: 800px;
+                /* Adjust the max-width as needed */
+            }
+        </style>
+        <div class="hero">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-5">
+                        <div class="intro-excerpt">
+                            <h1>Best removalist in Adelaide<span clsas="d-block"></span></h1>
+                            <p class="mb-4">Where Experience Meets Excellence in Relocation Solutions!</p>
+                            <p><a href="{% url 'contact' %}" class="btn btn-secondary me-2">Get a Quote</a><a
+                                    target="_blank" href="tel:+61434653406" class="btn btn-white-outline">Call Us
+                                    Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="container">
+                <p class="p">{{params | safe}}</p>
+            </div>
+
+        </main>
+
+        <!-- Start Footer Section -->
+        <footer class="footer-section">
+            <div class="container relative">
+
+                <div class="row">
+                    <div class="col-lg-8">
+
+                    </div>
+                </div>
+                <div class="row g-5 mb-5">
+                    <div class="col-lg-4">
+
+                        <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Elevating Relocation
+                                Experiences
+                                with Expertise and Care!<span>.</span></a></div>
+                        <p class="mb-4">At OG Movers, we are dedicated to making your move as smooth and stress-free as
+                            possible. With years of experience in the moving industry, we pride ourselves on
+                            reliability,
+                            professionalism, and exceptional customer service. Whether you're moving across town or
+                            across
+                            the country, our team of skilled movers is committed to handling your belongings with care
+                            and
+                            ensuring a seamless transition to your new home or office. From packing and transportation
+                            to
+                            unpacking and setup, we offer a full range of moving services tailored to meet your unique
+                            needs. Trust OG Movers to deliver quality service and peace of mind for your next move..</p>
+
+                        <ul class="list-unstyled custom-social">
+                            <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                            <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+                            <li><a href="https://www.instagram.com/ogmovers/" target="_blank"><span
+                                        class="fa fa-brands fa-instagram"></span></a></li>
+                            <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="row links-wrap">
+                            <div class="col-6 col-sm-6 col-md-3">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact us</a></li>
+                                    <li><iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59644446.984194264!2d91.5130743!3d-24.157415!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa20ad3b42d0d0245%3A0x3f36b978203408ab!2sOG%20Movers!5e0!3m2!1sen!2sin!4v1714326969689!5m2!1sen!2sin"
+                                            width="340" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+                                    <!--<li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509577!2d144.95373531544364!3d-37.817209979751984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0c93b70926705%3A0x1c033657a35104f0!2sAdelaide+SA+5000,+Australia!5e0!3m2!1sen!2sau!4v1630291924470!5m2!1sen!2sau" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="border-top copyright">
+                    <div class="row pt-4">
+                        <div class="col-lg-6">
+                            <p class="mb-2 text-center text-lg-start">Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script>. OG Movers. &mdash;
+                                <!-- License information: https://untree.co/license/ -->
+                            </p>
+                        </div>
+
+                        <footer>
+                            <ul class="list-unstyled d-inline-flex ms-auto">
+                                <li class="me-4"><a href="{% url 'terms' %}">Terms & Conditions</a></li>
+                                <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+                            </ul>
+                            <footer class="bg-dark text-white">
+                                <style>
+                                    .copy {
+                                        padding: 20px;
+                                        background-color: #2E2E2E;
+                                        color: #FFF;
+                                    }
+                            
+                                    .copy a {
+                                        color: #FFF;
+                                    }
+                            
+                                    .copy span {
+                                        float: right;
+                                    }
+                            
+                                    .copy span i {
+                                        margin-right: 20px;
+                                    }
+                                </style>
+                                <div class="copy">
+                                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.1/css/all.min.css" rel="stylesheet">
+                                    <div class="container">
+                                        <a href="https://www.mandeep-developer.site/">2024 &copy; All Rights Reserved | Designed and Developed
+                                            by
+                                            Developer</a>
+                            
+                                        <span>
+                                            <a href="https://www.mandeep-developer.site/" target="_blank"><i class="far fa-user-circle"></i></a>
+                                            <a href="https://github.com/Mannu258" target="_blank"><i class="fab fa-github"></i></a>
+                                            <a href="https://twitter.com/Mannu_258" target="_blank"><i class="fab fa-twitter"></i></a>
+                                            <a href="https://www.linkedin.com/in/mandeep-mishra-843378223/" target="_blank"><i
+                                                    class="fab fa-linkedin"></i></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </footer>
+                        </footer>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485596543"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'AW-16485596543');
+        </script>
+
+        <!-- End Footer Section -->
+
+        <!-- Bootstrap JS and its dependencies -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+        <script src="{% static 'js/tiny-slider.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+        <!-- Google Tag Manager -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'AW-16485596543');
+        </script>
+        <!-- End Google Tag Manager -->
+</body>
+
+</html>

@@ -23,7 +23,7 @@
 
 <body>
 	<!-- Add this script just before </body> -->
-	
+
 
 	<style>
 		.container-3d {
@@ -88,8 +88,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-	<div class="elfsight-app-eafe7237-0678-49ca-87f8-e17291ab2477" data-elfsight-app-lazy></div>
+
 
 	<!-- Start Product Section -->
 	<style>
@@ -219,6 +218,8 @@
 			</div>
 
 		</div>
+		<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+		<div class="elfsight-app-eafe7237-0678-49ca-87f8-e17291ab2477" data-elfsight-app-lazy></div>
 
 
 	</div>
@@ -241,8 +242,7 @@
 					<a class="product-item" href="{% url 'contact' %}">
 						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
 							<div class="service-logos">
-								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="service-logo">
-								<img src="{% static 'images/person.png' %}" alt="Logo 2" class="service-logo">
+								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="text-center">
 
 							</div>
 
@@ -269,8 +269,8 @@
 					<a class="product-item" href="{% url 'contact' %}">
 						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
 							<div class="service-logos">
-								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="service-logo">
-								<img src="{% static 'images/person.png' %}" alt="Logo 2" class="service-logo">
+								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="text-center">
+
 							</div>
 
 							<div class="service-price-info">
@@ -298,8 +298,7 @@
 					<a class="product-item" href="{% url 'contact' %}">
 						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
 							<div class="service-logos">
-								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="service-logo">
-								<img src="{% static 'images/person.png' %}" alt="Logo 2" class="service-logo">
+								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="text-center">
 
 							</div>
 
@@ -700,34 +699,34 @@
 
 
 
-<div class="container mt-5">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2000">
-                <img src="{% static 'images/cross1.png'%}" class="d-block w-100" alt="Slide 1">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="{% static 'images/cross2.png'%}" class="d-block w-100" alt="Slide 2">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="{% static 'images/cross3.png'%}" class="d-block w-100" alt="Slide 3">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="{% static 'images/cross4.png'%}" class="d-block w-100" alt="Slide 4">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
+	<div class="container mt-5">
+		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-bs-interval="000">
+					<img src="{% static 'images/cross1.png'%}" class="d-block w-100" alt="Slide 1">
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="{% static 'images/cross2.png'%}" class="d-block w-100" alt="Slide 2">
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="{% static 'images/cross3.png'%}" class="d-block w-100" alt="Slide 3">
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="{% static 'images/cross4.png'%}" class="d-block w-100" alt="Slide 4">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
 
 
 	<!-- Start Blog Section -->
@@ -776,80 +775,184 @@
 		</div>
 	</div>
 	<div class="container mt-5">
-		<a href="service">
-			<h2>Our Services</h2>
-		</a>
-		<p>We offer packing, transportation, unpacking, and storage solutions tailored to your needs.</p>
+		<style>
+			/* Add your preferred styling here */
+			/* For example: */
+			body {
+				font-family: Arial, sans-serif;
+			}
 
-		<a href="service">
-			<h2>Moving Costs</h2>
-		</a>
-		<p>Costs depend on factors like distance, volume, and additional services requested.</p>
+			h2 {
+				color: #333;
+			}
 
-		<a href="service">
-			<h2>Insurance</h2>
-		</a>
-		<p>Yes, basic insurance is included with options for additional coverage.</p>
+			p {
+				color: #666;
+			}
 
-		<a href="service">
-			<h2>Booking</h2>
-		</a>
-		<p>Book as early as possible, especially during peak seasons, to secure your preferred dates.</p>
+			
+		</style>
+		</head>
+		<style>
+			/* Add your preferred styling here */
+			/* For example: */
 
-		<a href="service">
-			<h2>Local and Long-Distance Moves</h2>
-		</a>
-		<p>Yes, we provide both local and long-distance moving services to accommodate various relocation needs.</p>
+			ul li:hover {
+				background-color: #f5f5f5;
+				transition: background-color 0.3s ease;
+			}
+		</style>
+		<script>
+			function toggleParagraph(serviceId) {
+				const paragraph = document.getElementById(serviceId);
+				paragraph.style.display = paragraph.style.display === 'none' ? 'block' : 'none';
+			}
+		</script>
+		<div class="container text-center">
+		<hr>
+		<h1 class=" btn btn-dark h1s" onclick="toggleParagraph('service-details')">Our Services</a></h1>
+		<p id="service-details" style="display: none;">
+			We offer packing, transportation, unpacking, and storage solutions tailored to your needs.
+		</p>
+		<hr>
+
+		<h1 class="btn btn-dark h1s" onclick="toggleParagraph('cost-details')">Moving Costs</h1>
+		<p id="cost-details" style="display: none;">
+			Costs depend on factors like distance, volume, and additional services requested.
+		</p>
+		<hr>
+		<h1 class="btn btn-dark h1s" onclick="toggleParagraph('insurance-details')">Insurance</h1>
+		<p id="insurance-details" style="display: none;">
+			Yes, basic insurance is included with options for additional coverage.
+		</p>
+		<hr>
+		<h1 class="btn btn-dark h1s" onclick="toggleParagraph('booking-details')">Booking</h1>
+		<p id="booking-details" style="display: none;">
+			Book as early as possible, especially during peak seasons, to secure your preferred dates.
+		</p>
+		<hr>
+		<h1 class="btn btn-dark h1s" onclick="toggleParagraph('local-long-distance-details')">Local and Long-Distance Moves</h1>
+		<p id="local-long-distance-details" style="display: none;">
+			Yes, we provide both local and long-distance moving services to accommodate various relocation needs.
+		</p>
+		<hr>
 	</div>
-	<!-- End Blog Section -->
+		<!-- End Blog Section -->
 
-	<!-- Start Footer Section -->
-	<footer class="footer-section">
-		<div class="container relative">
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
 
-			<div class="row">
-				<div class="col-lg-8">
+				<div class="row">
+					<div class="col-lg-8">
+
+					</div>
+				</div>
+				<div class="row g-5 mb-5">
+					<div class="col-lg-4">
+
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Elevating Relocation
+								Experiences
+								with Expertise and Care!<span>.</span></a></div>
+						<p class="mb-4">At OG Movers, we are dedicated to making your move as smooth and stress-free as
+							possible. With years of experience in the moving industry, we pride ourselves on
+							reliability,
+							professionalism, and exceptional customer service. Whether you're moving across town or
+							across
+							the country, our team of skilled movers is committed to handling your belongings with care
+							and
+							ensuring a seamless transition to your new home or office. From packing and transportation
+							to
+							unpacking and setup, we offer a full range of moving services tailored to meet your unique
+							needs. Trust OG Movers to deliver quality service and peace of mind for your next move..</p>
+
+						<ul class="list-unstyled custom-social">
+							<h3 class="h3">Follow us on</h3>
+							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+							<li><a href="https://www.tiktok.com/@og.movers?_t=8oDKu8nNwut&_r=1"><span class="fa fa-brands fa-tiktok"></i></span></a></li>
+							<li><a href="https://www.instagram.com/ogmovers/" target="_blank"><span
+										class="fa fa-brands fa-instagram"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-8">
+						<div class="row links-wrap">
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">About us</a></li>
+									<li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
+									<li><a href="{% url 'contact' %}">Contact us</a></li>
+									<li><iframe
+											src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59644446.984194264!2d91.5130743!3d-24.157415!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa20ad3b42d0d0245%3A0x3f36b978203408ab!2sOG%20Movers!5e0!3m2!1sen!2sin!4v1714326969689!5m2!1sen!2sin"
+											width="340" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+											referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+									<!--<li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509577!2d144.95373531544364!3d-37.817209979751984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0c93b70926705%3A0x1c033657a35104f0!2sAdelaide+SA+5000,+Australia!5e0!3m2!1sen!2sau!4v1630291924470!5m2!1sen!2sau" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+									</li>
+								</ul>
+							</div>
+
+
+
+
+						</div>
+					</div>
 
 				</div>
-			</div>
-			<div class="row g-5 mb-5">
-				<div class="col-lg-4">
 
-					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Elevating Relocation Experiences
-							with Expertise and Care!<span>.</span></a></div>
-					<p class="mb-4">At OG Movers, we are dedicated to making your move as smooth and stress-free as
-						possible. With years of experience in the moving industry, we pride ourselves on reliability,
-						professionalism, and exceptional customer service. Whether you're moving across town or across
-						the country, our team of skilled movers is committed to handling your belongings with care and
-						ensuring a seamless transition to your new home or office. From packing and transportation to
-						unpacking and setup, we offer a full range of moving services tailored to meet your unique
-						needs. Trust OG Movers to deliver quality service and peace of mind for your next move..</p>
-
-					<ul class="list-unstyled custom-social">
-						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-						<li><a href="https://www.instagram.com/ogmovers/" target="_blank"><span
-									class="fa fa-brands fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
-					</ul>
-				</div>
-
-				<div class="col-lg-8">
-					<div class="row links-wrap">
-						<div class="col-6 col-sm-6 col-md-3">
-							<ul class="list-unstyled">
-								<li><a href="#">About us</a></li>
-								<li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
-								<li><a href="{% url 'contact' %}">Contact us</a></li>
-								<li><iframe
-										src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59644446.984194264!2d91.5130743!3d-24.157415!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa20ad3b42d0d0245%3A0x3f36b978203408ab!2sOG%20Movers!5e0!3m2!1sen!2sin!4v1714326969689!5m2!1sen!2sin"
-										width="340" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-										referrerpolicy="no-referrer-when-downgrade"></iframe></li>
-								<!--<li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509577!2d144.95373531544364!3d-37.817209979751984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0c93b70926705%3A0x1c033657a35104f0!2sAdelaide+SA+5000,+Australia!5e0!3m2!1sen!2sau!4v1630291924470!5m2!1sen!2sau" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
-								</li>
-							</ul>
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;
+								<script>document.write(new Date().getFullYear());</script>. OG Movers. &mdash;
+								<!-- License information: https://untree.co/license/ -->
+							</p>
 						</div>
 
+						<footer>
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="{% url 'terms' %}">Terms & Conditions</a></li>
+								<li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+							</ul>
+							<footer class="bg-dark text-white">
+								<style>
+									.copy {
+										padding: 20px;
+										background-color: #2E2E2E;
+										color: #FFF;
+									}
+							
+									.copy a {
+										color: #FFF;
+									}
+							
+									.copy span {
+										float: right;
+									}
+							
+									.copy span i {
+										margin-right: 20px;
+									}
+								</style>
+								<div class="copy">
+									<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.1/css/all.min.css" rel="stylesheet">
+									<div class="container">
+										<a href="https://www.mandeep-developer.site/">2024 &copy; All Rights Reserved | Designed and Developed
+											by
+											Developer</a>
+							
+										<span>
+											<a href="https://www.mandeep-developer.site/" target="_blank"><i class="far fa-user-circle"></i></a>
+											<a href="https://github.com/Mannu258" target="_blank"><i class="fab fa-github"></i></a>
+											<a href="https://twitter.com/Mannu_258" target="_blank"><i class="fab fa-twitter"></i></a>
+											<a href="https://www.linkedin.com/in/mandeep-mishra-843378223/" target="_blank"><i
+													class="fab fa-linkedin"></i></a>
+										</span>
+									</div>
+								</div>
+							</footer>
+						</footer>
+
 
 
 
@@ -857,54 +960,29 @@
 				</div>
 
 			</div>
+		</footer>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485596543"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
 
-			<div class="border-top copyright">
-				<div class="row pt-4">
-					<div class="col-lg-6">
-						<p class="mb-2 text-center text-lg-start">Copyright &copy;
-							<script>document.write(new Date().getFullYear());</script>. OG Movers. &mdash;
-							<!-- License information: https://untree.co/license/ -->
-						</p>
-					</div>
-
-					<footer>
-						<ul class="list-unstyled d-inline-flex ms-auto">
-							<li class="me-4"><a href="{% url 'terms' %}">Terms & Conditions</a></li>
-							<li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
-						</ul>
-						<a href="https://www.mandeep-developer.site" class="text-muted m-3">Developer © 2024</a>
-					</footer>
-
+			gtag('config', 'AW-16485596543');
+		</script>
+		<!-- End Footer Section -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<!-- Bootstrap JS and its dependencies -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
-
-				</div>
-			</div>
-
-		</div>
-	</footer>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16485596543"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'AW-16485596543');
-	</script>
-	<!-- End Footer Section -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	<!-- Bootstrap JS and its dependencies -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
-	<script src="{% static 'js/tiny-slider.js' %}"></script>
-	<script src="{% static 'js/custom.js' %}"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"></script>
+		<script src="{% static 'js/tiny-slider.js' %}"></script>
+		<script src="{% static 'js/custom.js' %}"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from . models import *
 import time
 from . email import *
@@ -91,3 +91,10 @@ def privacy(request):
 
 def service(request):
     return render(request,"service.html")
+
+def innerservice(request,params):
+    from . page import text
+    params = text(params)
+    return render(request,"main-service.html",{"params":params})
+   
+    
