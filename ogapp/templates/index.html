@@ -666,6 +666,33 @@
 			justify-content: center;
 			align-items: center;
 		}
+
+		/* Adjust carousel height for mobile screens */
+		@media (max-width: 767px) {
+			#carouselExample {
+				height: auto;
+				/* Let the content determine the height */
+			}
+		}
+
+		/* Larger carousel controls for better touch interaction */
+		.carousel-control-prev,
+		.carousel-control-next {
+			font-size: 1.5rem;
+			/* Adjust as needed */
+		}
+
+		/* Center carousel controls vertically */
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			transform: translateY(-50%);
+		}
+
+		/* Make images responsive within the carousel */
+		.carousel-item img {
+			max-width: 100%;
+			height: auto;
+		}
 	</style>
 
 
@@ -674,18 +701,18 @@
 		<div id="carouselExample" class="carousel slide" style="margin: auto;">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="{% static 'images/cross1.png'%}" class="d-block" alt="...">
+					<img src="{% static 'images/cross1.png'%}" class="d-block w-100" alt="...">
 				</div>
 				<div class="carousel-item">
-					<img src="{% static 'images/cross2.png'%}" class="d-block" alt="...">
+					<img src="{% static 'images/cross2.png'%}" class="d-block w-100" alt="...">
 
 				</div>
 				<div class="carousel-item">
-					<img src="{% static 'images/cross3.png'%}" class="d-block" alt="...">
+					<img src="{% static 'images/cross3.png'%}" class="d-block w-100" alt="...">
 
 				</div>
 				<div class="carousel-item">
-					<img src="{% static 'images/cross4.png'%}" class="d-block" alt="...">
+					<img src="{% static 'images/cross4.png'%}" class="d-block w-100" alt="...">
 
 				</div>
 			</div>
@@ -747,19 +774,29 @@
 		</div>
 	</div>
 	<div class="container mt-5">
-		<a href="service"><h2>Our Services</h2></a>
+		<a href="service">
+			<h2>Our Services</h2>
+		</a>
 		<p>We offer packing, transportation, unpacking, and storage solutions tailored to your needs.</p>
 
-		<a href="service"><h2>Moving Costs</h2></a>
+		<a href="service">
+			<h2>Moving Costs</h2>
+		</a>
 		<p>Costs depend on factors like distance, volume, and additional services requested.</p>
 
-		<a href="service"><h2>Insurance</h2></a>
+		<a href="service">
+			<h2>Insurance</h2>
+		</a>
 		<p>Yes, basic insurance is included with options for additional coverage.</p>
 
-		<a href="service"><h2>Booking</h2></a>
+		<a href="service">
+			<h2>Booking</h2>
+		</a>
 		<p>Book as early as possible, especially during peak seasons, to secure your preferred dates.</p>
 
-		<a href="service"><h2>Local and Long-Distance Moves</h2></a>
+		<a href="service">
+			<h2>Local and Long-Distance Moves</h2>
+		</a>
 		<p>Yes, we provide both local and long-distance moving services to accommodate various relocation needs.</p>
 	</div>
 	<!-- End Blog Section -->
@@ -833,7 +870,7 @@
 							<li class="me-4"><a href="{% url 'terms' %}">Terms & Conditions</a></li>
 							<li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
 						</ul>
-						<a href="https://mandeep.pythonanywhere.com/" class="text-muted m-3">Developer © 2024</a>
+						<a href="https://www.mandeep-developer.site" class="text-muted m-3">Developer © 2024</a>
 					</footer>
 
 

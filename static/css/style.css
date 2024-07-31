@@ -1097,8 +1097,8 @@ body {
 
 .service-logos {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
   margin-bottom: 10px;
 }
 
