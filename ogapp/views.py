@@ -1,8 +1,6 @@
 from django.shortcuts import render,HttpResponse
 from . models import *
-import time
 from . email import *
-import threading
 
 # Create your views here.
 
@@ -33,11 +31,7 @@ def home(request):
                 price = "Piano"
             elif price == '1007':
                 price = "Pool Table"
-
-            order_thread = threading.Thread(target=send_order_email, args=(name, customer_email, price, date, mobile, froml, tol))
-            
-            order_thread.start()
-
+            send_order_email(name, customer_email, price, date, mobile, froml, tol)
        except Exception as e:
            print(e)
        return render(request,'thankyou.html')
@@ -53,9 +47,7 @@ def contact(request):
        mobile =  request.POST.get('mobile')
        froml =  request.POST.get('froml')
        tol =  request.POST.get('tol')
-
        us = contactus.objects.get_or_create(name=name,email=customer_email,price=price,date=date,mobile=mobile,from_location=froml,to_location=tol)
-
        try:
             if price == '1001':
                 price = "One Bedroom"
@@ -71,11 +63,7 @@ def contact(request):
                 price = "Piano"
             elif price == '1007':
                 price = "Pool Table"
-
-            order_thread = threading.Thread(target=send_order_email, args=(name, customer_email, price, date, mobile, froml, tol))
-            
-            order_thread.start()
-
+            send_order_email(name, customer_email, price, date, mobile, froml, tol)
        except Exception as e:
            print(e)
        return render(request,'thankyou.html')

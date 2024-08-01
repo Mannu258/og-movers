@@ -4,8 +4,8 @@ def send_order_email(name, customer_email, price, date, mobile, froml, tol):
     email = EmailMessage(
         subject='Order Received',
         body=f"Name:\t{name}\nEmail:\t{customer_email}\nPrice:\t{price}\nDate:\t{date}\nMobile:\t{mobile}\nFrom:\t{froml}\nTo:\t{tol}\n\nRegards,\nOG Movers\n\nContact Us:\nPhone: +1 (123) 456-7890\nEmail: info@ogmovers.com",
-        # to=['mandeepkumarmannu123@gmail.com','ogmovers1@gmail.com','ogmovers2@gmail.com','priyanshuv007@gmail.com']
-        to=['mandeepkumarmannu123@gmail.com']
+        to=['mandeepkumarmannu123@gmail.com','ogmovers1@gmail.com','ogmovers2@gmail.com','priyanshuv007@gmail.com']
+        # to=['mandeepkumarmannu123@gmail.com']
     )
     email.send()
     customer = EmailMessage(
