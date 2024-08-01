@@ -97,5 +97,8 @@ def innerservice(request,str):
     from . page import text
     params = text(params)
     return render(request,"main-service.html",{"params":params})
+
+def checking(request,params):
+    return HttpResponse(f"{params}")
    
     

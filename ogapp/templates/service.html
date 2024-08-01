@@ -39,7 +39,7 @@
                     </li>
                     <li><a class="nav-link" href="{% url 'contact' %}">Contact us</a></li>
                     <li><a class="nav-link active" href="{% url 'service' %}">Services</a></li>
-					
+                    <li><a class="nav-link" href=" {% url 'iservice' 'FAQ' %} ">FAQ</a></li>
                     <li><a class="nav-link" href="/">About us</a></li>
                 </ul>
             </div>
@@ -125,7 +125,7 @@
                                 focus on settling into your new home with peace of mind. Choose us for a
                                 personalized
                                 moving experience that exceeds your expectations..</p> <a class="btn btn-dark-outline"
-                                href="service/Service-Residential-Moving">Read More</a>
+                                href="{% url 'iservice' 'Service-Residential-Moving' %}">Read More</a>
                         </div>
                         <div class="service-description">
                             <div class="service-header">2. Commercial Moving</div>
@@ -146,7 +146,7 @@
                                 deliver
                                 moving experience that exceeds your expectations..
                                 reliable, professional service that keeps your business moving forward..</p><a
-                                class="btn btn-dark-outline" href="service/Service-Commercial-Moving">Read More</a>
+                                class="btn btn-dark-outline" href="{% url 'iservice' 'Service-Commercial-Moving' %}">Read More</a>
                         </div>
                         <div class="service-description">
                             <div class="service-header">3. Packing Services</div>
@@ -165,7 +165,7 @@
                                 handle every aspect of packing with care and efficiency. Choose OG Movers for
                                 moving experience that exceeds your expectations..
                                 comprehensive packing solutions that give you peace of mind during your move..</p><a
-                                class="btn btn-dark-outline" href="service/Service-Packing-Services">Read More</a>
+                                class="btn btn-dark-outline" href="{% url 'iservice' 'Service-Packing-Services'%}">Read More</a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -191,7 +191,7 @@
                                 unloading
                                 moving experience that exceeds your expectations..
                                 services that make your move smooth and worry-free..</p><a class="btn btn-dark-outline"
-                                href="service/Service-Loading-Unloading-Services">Read More</a>
+                                href="{% url 'iservice' 'Service-Loading-Unloading-Services' %}">Read More</a>
                         </div>
                         <div class="service-description">
                             <div class="service-header">5. Long-Distance Moving</div>
@@ -213,7 +213,7 @@
                                 prioritize communication and transparency, keeping you informed every step of the
                                 way.
                                 moving experience that exceeds your expectations..</p> <a class="btn btn-dark-outline"
-                                href="service/Service-Long-Distance-Moving">Read More</a>
+                                href="{% url 'iservice' 'Service-Long-Distance-Moving' %}">Read More</a>
                         </div>
                         <div class="service-description">
                             <div class="service-header">6. Specialty Item Moving</div>
@@ -236,16 +236,13 @@
                                 according
                                 moving experience that exceeds your expectations.. to your specifications, ensuring they
                                 arrive in pristine condition..</p> <a class="btn btn-dark-outline"
-                                href="service/Service-Specialty-Item-Moving">Read More</a>
+                                href="{% url 'iservice' 'Service-Specialty-Item-Moving' %}">Read More</a>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
     </main>
 
     <!-- Start Footer Section -->
