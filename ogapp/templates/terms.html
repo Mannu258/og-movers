@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,41 +117,16 @@
 
     <p>By booking and using our services, you acknowledge that you have read, understood, and agree to be bound by these
         terms and conditions.</p>
-        <footer class="bg-dark text-white">
-            <style>
-                .copy {
-                    padding: 20px;
-                    background-color: #2E2E2E;
-                    color: #FFF;
-                }
-        
-                .copy a {
-                    color: #FFF;
-                }
-        
-                .copy span {
-                    float: right;
-                }
-        
-                .copy span i {
-                    margin-right: 20px;
-                }
-            </style>
-            <div class="copy">
-                <div class="container">
-                    <a href="https://www.mandeep-developer.site/">2024 &copy; All Rights Reserved | Designed and Developed
-                        by
-                        Developer</a>
-        
-                    <span>
-                        <a href="https://www.mandeep-developer.site/" target="_blank"><i class="far fa-user-circle"></i></a>
-                        <a href="https://github.com/Mannu258" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com/Mannu_258" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/mandeep-mishra-843378223/" target="_blank"><i
-                                class="fab fa-linkedin"></i></a>
-                    </span>
-                </div>
-            </div>
+        <footer>
+            <a href="https://www.mandeep-developer.site/">2024 &copy; All Rights Reserved |
+                Designed and Developed
+                by
+                Developer</a>
+            <ul class="list-unstyled d-inline-flex ms-auto">
+                <li class="me-4"><a href="{% url 'terms' %}">Terms & Conditions</a></li>
+                <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+                
+            </ul>
         </footer>
     </body>
     </html>

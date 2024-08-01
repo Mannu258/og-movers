@@ -7,8 +7,5 @@ urlpatterns = [
    path('terms',terms,name="terms"),
    path('privacy',privacy,name="privacy"),
    path('service',service,name="service"),
-   path('service/<str:params>',innerservice,name="iservice")
-
-
-
+   path('service/<str>',innerservice,name="iservice"),
 ]

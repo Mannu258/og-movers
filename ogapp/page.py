@@ -228,6 +228,150 @@ def text(params):
     <p>Ready to move your specialty items with care and precision? Contact OG Movers today to discuss your moving needs and schedule a consultation. Let our dedicated team of professionals handle your specialty item moving requirements with expertise and reliability. Trust OG Movers for exceptional service that exceeds your expectations.</p>
     
 """
+    FAQ = '''
+    <div class="scriptarea">
+                <div class="faq-container">
+                    <script>
+                        function toggleParagraph(paragraphId) {
+                            const paragraph = document.getElementById(paragraphId);
+                            paragraph.style.display = paragraph.style.display === 'none' ? 'block' : 'none';
+                        }
+
+                        // Hide all paragraphs initially
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const allParagraphs = document.querySelectorAll('.p');
+                            allParagraphs.forEach(paragraph => {
+                                paragraph.style.display = 'none';
+                            });
+                        });
+                    </script>
+                    <style>
+                        .h1s:hover {
+                            color: rgb(47, 15, 205);
+                        }
+
+                        hr {
+                            border: none;
+                            border-top: 3px dotted #999;
+                            color: #020202;
+                            background-color: #fff;
+                            height: 1px;
+                        }
+                    </style>
+                    <h2>FAQs</h2>
+
+                    <hr>
+                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service1')">1. What services does your moving
+                        company
+                        offer?
+                    </h2>
+                    <p id="service1" class="p">
+                        We offer a range of services including local and long-distance moving, packing and
+                        unpacking,
+                        furniture disassembly and reassembly, storage solutions, and more.
+                    </p>
+                    <hr>
+
+                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service2')">2. How do I get a quote for my move?
+                    </h2>
+                    <p id="service2" class="p">
+                        You can get a free quote by filling out our online form, calling our customer service
+                        team, or
+                        scheduling an in-home estimate with one of our representatives.
+                    </p>
+                    <hr>
+                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service3')">3. Are your movers trained and insured?
+                    </h2>
+                    <p id="service3" class="p">
+                        Yes, all our movers are trained professionals who are fully licensed and insured to
+                        ensure the
+                        safety
+                        of your belongings during the move.
+                    </p>
+                    <hr>
+                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service4')">4. Do you provide packing materials,
+                        and
+                        can I
+                        pack my own items?</h2>
+                    <p id="service4" class="p">
+                        We offer high-quality packing materials for purchase. You can choose to pack your own
+                        items or
+                        opt
+                        for our professional packing services for added convenience.
+                    </p>
+                    <hr>
+
+
+                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service5')">5. What should I do to prepare for
+                        moving
+                        day?
+                    </h2>
+                    <p id="service5" class="p">
+                        We recommend decluttering and organizing your belongings beforehand. Ensure all boxes
+                        are
+                        labeled
+                        clearly, and provide any special instructions to our team for fragile or valuable items.
+                    </p>
+                    <hr>
+
+                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service6')">6. Do you offer storage options if my
+                        new
+                        home
+                        isn’t ready yet?</h2>
+                    <p id="service6" class="p">
+                        Yes, we provide short-term and long-term storage solutions in our secure facilities to
+                        accommodate
+                        your needs until your new home is ready for move-in.
+                    </p>
+                    <hr>
+                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service7')">7. Can you handle specialty items such
+                        as
+                        pianos,
+                        antiques, or large appliances?</h2>
+                    <p id="service7" class="p">
+                        Absolutely, our movers are trained to handle specialty items with care. Please inform us
+                        in
+                        advance
+                        so we can make appropriate arrangements.
+                    </p>
+                    <hr>
+
+                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service8')">8. What happens if my belongings are
+                        damaged
+                        during the move?</h2>
+                    <p id="service8" class="p">
+                        While we take every precaution to ensure a safe move, in the rare event of damage, we
+                        have a
+                        claims
+                        process in place. Our customer service team will assist you through the process.
+                    </p>
+                    <hr>
+
+                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service9')">9. How far in advance should I schedule
+                        my
+                        move?
+                    </h2>
+                    <p id="service9" class="p">
+                        It’s best to schedule your move as soon as you have a confirmed moving date, especially
+                        during
+                        peak
+                        seasons like summer. This helps ensure availability and allows time for proper planning.
+                    </p>
+                    <hr>
+                    <h2 class="btn h1s" onclick="toggleParagraph('service10')">10. Do you offer moving services on
+                        weekends and
+                        holidays?
+                    </h2>
+                    <p id="service10" class="p">
+                        Yes, we offer moving services seven days a week, including weekends and holidays, to
+                        accommodate
+                        your schedule and make your move as convenient as possible.
+                    </p>
+                    <hr>
+
+                </div>
+    
+    '''
     error = "Not Found"
     if params == "Service-Residential-Moving":
         return text1
@@ -241,5 +385,7 @@ def text(params):
         return text5
     elif params == "Service-Specialty-Item-Moving":
         return text6
+    elif params == "FAQ":
+        return FAQ
     else:
         return error

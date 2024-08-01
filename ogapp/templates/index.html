@@ -251,7 +251,7 @@
 								<strong>$99 </strong><span>per hour</span>
 							</div>
 							<div class="service-body">
-								<p>Suitable for 1 Bedroom <br> apartment </p>
+								<p>Suitable for 1-2 bedroom<br> apartment </p>
 								<p>4.5 Ton truck</p>
 								<p>2X Movers</p>
 								<p>Fully Insured</p>
@@ -277,7 +277,7 @@
 								<strong>$110 </strong><span>per hour</span>
 							</div>
 							<div class="service-body">
-								<p>Suitable for 1-3 Bedrooms apartment</p>
+								<p>Suitable for 3 bedroom</p>
 								<p>5 Ton Truck</p>
 								<p>2X Movers</p>
 								<p>Fully Insured</p>
@@ -307,7 +307,7 @@
 								<strong>$169 </strong><span>per hour</span>
 							</div>
 							<div class="service-body">
-								<p>Suitable for Studio or 2-4 Bedrooms apartment</p>
+								<p>Suitable for 4 + bedroom</p>
 								<p>8.5 Ton Truck</p>
 								<p>2X Movers</p>
 								<p>Fully Insured</p>
@@ -323,27 +323,28 @@
 					</a>
 
 				</div>
-				<div id="dlr">
-					<img class="responsive-imagess" src="{% static 'images/dollor.png' %}" alt="">
-				</div>
 
 				<style>
-					/* Set a maximum width for the image */
 					#dlr {
-						margin: -60;
-						padding: -60;
-						height: 500px;
-						width: 100%;
-						/* Adjust to fill the available width */
 						text-align: center;
-						display: flex;
-						justify-content: center;
-						/* Center horizontally */
-						align-items: center;
-						/* Center vertically */
+						position: relative;
 					}
 
-					/* Responsive image */
+					#dlr h1 {
+						font-size: 4rem;
+						color: #004466;
+						font-weight: bolder;
+						position: relative;
+						top: 10%;
+						bottom: 10%;
+						text-align: center;
+					}
+
+					#dlr img {
+						max-width: 100%;
+						height: auto;
+					}
+
 					.responsive-imagess {
 						max-width: 100%;
 						height: auto;
@@ -357,6 +358,10 @@
 						}
 					}
 				</style>
+				<div id="dlr">
+					<h1 id="mainh1">Winter sale Extra</h1>
+					<img class="responsive-imagess imgg" src="{% static 'images/dollor.png' %}" alt="">
+				</div>
 
 			</div>
 
@@ -746,6 +751,9 @@
 								class="img-fluid"></a>
 						<div class="post-content-entry">
 							<h3><a href="#"></a>Packing Supplies Provision </h3>
+							<p class="p">From Boxes to Bubble Wrap, We Provide Everything You Need for Stress-Free
+								Packing and
+								Moving.</p>
 
 						</div>
 					</div>
@@ -757,6 +765,7 @@
 								class="img-fluid"></a>
 						<div class="post-content-entry">
 							<h3><a href="#">Fragile Item Handling</a></h3>
+							<p class="p">Handle with Care: Your One-Stop Shop for Packing Supplies for Fragile Items</p>
 						</div>
 					</div>
 				</div>
@@ -767,6 +776,7 @@
 								class="img-fluid"></a>
 						<div class="post-content-entry">
 							<h3><a href="#">Heavy item Moving</a></h3>
+							<p class="p">Effortlessly Move Heavy Items with Our Robust Packing and Moving Supplies</p>
 						</div>
 					</div>
 				</div>
@@ -789,8 +799,6 @@
 			p {
 				color: #666;
 			}
-
-			
 		</style>
 		</head>
 		<style>
@@ -809,34 +817,35 @@
 			}
 		</script>
 		<div class="container text-center">
-		<hr>
-		<h1 class="btn btn-dark h1s" onclick="toggleParagraph('service-details')">Our Services</a></h1>
-		<p id="service-details" style="display: none;">
-			We offer packing, transportation, unpacking, and storage solutions tailored to your needs.
-		</p>
-		<hr>
+			<hr>
+			<h1 class="btn btn-dark h1s" onclick="toggleParagraph('service-details')">Our Services</a></h1>
+			<p id="service-details" style="display: none;">
+				We offer packing, transportation, unpacking, and storage solutions tailored to your needs.
+			</p>
+			<hr>
 
-		<h1 class="btn btn-dark h1s" onclick="toggleParagraph('cost-details')">Moving Costs</h1>
-		<p id="cost-details" style="display: none;">
-			Costs depend on factors like distance, volume, and additional services requested.
-		</p>
-		<hr>
-		<h1 class="btn btn-dark h1s" onclick="toggleParagraph('insurance-details')">Insurance</h1>
-		<p id="insurance-details" style="display: none;">
-			Yes, basic insurance is included with options for additional coverage.
-		</p>
-		<hr>
-		<h1 class="btn btn-dark h1s" onclick="toggleParagraph('booking-details')">Booking</h1>
-		<p id="booking-details" style="display: none;">
-			Book as early as possible, especially during peak seasons, to secure your preferred dates.
-		</p>
-		<hr>
-		<h1 class="btn btn-dark h1s" onclick="toggleParagraph('local-long-distance-details')">Local and Long-Distance Moves</h1>
-		<p id="local-long-distance-details" style="display: none;">
-			Yes, we provide both local and long-distance moving services to accommodate various relocation needs.
-		</p>
-		<hr>
-	</div>
+			<h1 class="btn btn-dark h1s" onclick="toggleParagraph('cost-details')">Moving Costs</h1>
+			<p id="cost-details" style="display: none;">
+				Costs depend on factors like distance, volume, and additional services requested.
+			</p>
+			<hr>
+			<h1 class="btn btn-dark h1s" onclick="toggleParagraph('insurance-details')">Insurance</h1>
+			<p id="insurance-details" style="display: none;">
+				Yes, basic insurance is included with options for additional coverage.
+			</p>
+			<hr>
+			<h1 class="btn btn-dark h1s" onclick="toggleParagraph('booking-details')">Booking</h1>
+			<p id="booking-details" style="display: none;">
+				Book as early as possible, especially during peak seasons, to secure your preferred dates.
+			</p>
+			<hr>
+			<h1 class="btn btn-dark h1s" onclick="toggleParagraph('local-long-distance-details')">Local and
+				Long-Distance Moves</h1>
+			<p id="local-long-distance-details" style="display: none;">
+				Yes, we provide both local and long-distance moving services to accommodate various relocation needs.
+			</p>
+			<hr>
+		</div>
 		<!-- End Blog Section -->
 
 		<!-- Start Footer Section -->
@@ -869,7 +878,8 @@
 						<ul class="list-unstyled custom-social">
 							<h3 class="h3">Follow us on</h3>
 							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-							<li><a href="https://www.tiktok.com/@og.movers?_t=8oDKu8nNwut&_r=1"><span class="fa fa-brands fa-tiktok"></i></span></a></li>
+							<li><a href="https://www.tiktok.com/@og.movers?_t=8oDKu8nNwut&_r=1"><span
+										class="fa fa-brands fa-tiktok"></i></span></a></li>
 							<li><a href="https://www.instagram.com/ogmovers/" target="_blank"><span
 										class="fa fa-brands fa-instagram"></span></a></li>
 							<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
@@ -907,49 +917,20 @@
 								<script>document.write(new Date().getFullYear());</script>. OG Movers. &mdash;
 								<!-- License information: https://untree.co/license/ -->
 							</p>
+							<a href="https://www.mandeep-developer.site/">2024 &copy; All Rights Reserved |
+								Designed and Developed
+								by
+								Developer</a>
 						</div>
 
 						<footer>
 							<ul class="list-unstyled d-inline-flex ms-auto">
 								<li class="me-4"><a href="{% url 'terms' %}">Terms & Conditions</a></li>
 								<li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+								<li><a class="nav-link" href="service/FAQ">FAQ</a></li>
+
 							</ul>
-							<footer class="bg-dark text-white">
-								<style>
-									.copy {
-										padding: 20px;
-										background-color: #2E2E2E;
-										color: #FFF;
-									}
-							
-									.copy a {
-										color: #FFF;
-									}
-							
-									.copy span {
-										float: right;
-									}
-							
-									.copy span i {
-										margin-right: 20px;
-									}
-								</style>
-								<div class="copy">
-									<div class="container">
-										<a href="https://www.mandeep-developer.site/">2024 &copy; All Rights Reserved | Designed and Developed
-											by
-											Developer</a>
-							
-										<span>
-											<a href="https://www.mandeep-developer.site/" target="_blank"><i class="far fa-user-circle"></i></a>
-											<a href="https://github.com/Mannu258" target="_blank"><i class="fab fa-github"></i></a>
-											<a href="https://twitter.com/Mannu_258" target="_blank"><i class="fab fa-twitter"></i></a>
-											<a href="https://www.linkedin.com/in/mandeep-mishra-843378223/" target="_blank"><i
-													class="fab fa-linkedin"></i></a>
-										</span>
-									</div>
-								</div>
-							</footer>
+
 						</footer>
 
 

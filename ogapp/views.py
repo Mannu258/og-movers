@@ -92,7 +92,8 @@ def privacy(request):
 def service(request):
     return render(request,"service.html")
 
-def innerservice(request,params):
+def innerservice(request,str):
+    params = str
     from . page import text
     params = text(params)
     return render(request,"main-service.html",{"params":params})
