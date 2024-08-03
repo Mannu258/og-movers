@@ -54,7 +54,7 @@
 					<li><a class="nav-link" href="{% url 'contact' %}">Contact us</a></li>
 					<li><a class="nav-link" href="{% url 'service' %}">Services</a></li>
 					<li><a class="nav-link" href=" {% url 'iservice' 'FAQ' %} ">FAQ</a></li>
-					<li><a class="nav-link" href="/">About us</a></li>
+					<li><a class="nav-link" href="{% url 'iservice' 'ABOUT' %}">About us</a></li>
 				</ul>
 			</div>
 		</div>
@@ -249,16 +249,61 @@
 
 							<div class="service-price-info">
 
-								<strong>$99 </strong><span>per hour</span>
+								<h2 id="price-dollor">$99</h2><span>per hour</span>
 							</div>
 							<div class="service-body">
+								<hr id="HR">
 								<p>Suitable for 1-2 bedroom</p>
+								<hr id="HR">
 								<p>4.5 Ton truck</p>
+								<hr id="HR">
 								<p>2X Movers</p>
+								<hr id="HR">
 								<p>Fully Insured</p>
+								<hr id="HR">
+
 								<p>Scratch Proof Wrapping</p>
+								<hr id="HR">
+
 								<p>Special care for expensive and fragile items </p>
+								<hr id="HR">
+
 								<p>Assistance with Assembly and Disassembly</p>
+								<hr id="HR">
+								<style>
+									#HR {
+										margin-top: 5px;
+										margin-bottom: 5px;
+									}
+
+									#HR {
+										height: 2px;
+										border: none;
+										border-top: 3px dotted #0074D9;
+										background-color: #00008B;
+										animation: stretch 1s infinite alternate;
+									}
+
+									@keyframes stretch {
+										from {
+											width: 0;
+										}
+
+										to {
+											width: 100%;
+										}
+									}
+
+									strong {
+										font-size: larger;
+									}
+
+									#price-dollor {
+										font-weight: bolder;
+										font-size: 3rem;
+									}
+								</style>
+
 							</div>
 							<div class="service-footer">
 								<a href="{% url 'contact' %}" class="btn-book-now">Book Now</a>
@@ -273,18 +318,31 @@
 								<img src="{% static 'images/person.png' %}" alt="Logo 1" class="text-center">
 
 							</div>
-
 							<div class="service-price-info">
-								<strong>$110 </strong><span>per hour</span>
+								<h2 id="price-dollor">$110</h2><span>per hour</span>
+
 							</div>
 							<div class="service-body">
+								<hr id="HR">
 								<p>Suitable for 3 bedroom</p>
+								<hr id="HR">
 								<p>5 Ton Truck</p>
+								<hr id="HR">
 								<p>2X Movers</p>
+								<hr id="HR">
+
 								<p>Fully Insured</p>
+								<hr id="HR">
+
 								<p>Scratch Proof Wrapping</p>
+								<hr id="HR">
+
 								<p>Special care for expensive and fragile items </p>
+								<hr id="HR">
+
 								<p>Assistance with Assembly and Disassembly</p>
+								<hr id="HR">
+
 							</div>
 							<div class="service-footer">
 								<a href="{% url 'contact' %}" class="btn-book-now">Book Now</a>
@@ -304,17 +362,33 @@
 							</div>
 
 							<div class="service-price-info">
+								<h2 id="price-dollor">$169</h2><span>per hour</span>
 
-								<strong>$169 </strong><span>per hour</span>
 							</div>
 							<div class="service-body">
+								<hr id="HR">
+
 								<p>Suitable for 4 + bedroom</p>
+								<hr id="HR">
+
 								<p>8.5 Ton Truck</p>
+								<hr id="HR">
+
 								<p>2X Movers</p>
+								<hr id="HR">
+
 								<p>Fully Insured</p>
+								<hr id="HR">
+
 								<p>Scratch Proof Wrapping</p>
+								<hr id="HR">
+
 								<p>Special care for expensive and fragile items </p>
+								<hr id="HR">
+
 								<p>Assistance with Assembly and Disassembly</p>
+								<hr id="HR">
+
 							</div>
 							<div class="service-footer">
 								<a href="{% url 'contact' %}" class="btn-book-now">Book Now</a>
@@ -357,6 +431,10 @@
 							max-width: 50%;
 							/* Adjust this value as needed */
 						}
+					}
+
+					.why-choose-section {
+						padding: 0rem 0;
 					}
 				</style>
 				<div id="dlr">
@@ -650,23 +728,6 @@
 			width: 100%;
 			height: auto;
 			object-fit: cover;
-
-		}
-
-
-		@media (max-width: 768px) {
-			.carousel-inner img {
-				height: 200px;
-
-			}
-		}
-
-
-		@media (max-width: 480px) {
-			.carousel-inner img {
-				height: 150px;
-
-			}
 		}
 
 		.carousel {
@@ -677,11 +738,33 @@
 
 		/* Adjust carousel height for mobile screens */
 		@media (max-width: 767px) {
-			#carouselExample {
+			#carouselExampleControls {
+				max-width: 100%;
 				height: auto;
 				/* Let the content determine the height */
 			}
 		}
+
+		/* For laptop view */
+		@media (min-width: 768px) and (max-width: 1199px) {
+			#carouselExampleControls {
+				max-width: 60%;
+				height: auto;
+				/* Let the content determine the height */
+			}
+		}
+
+		/* For PC view (larger screens) */
+		@media (min-width: 1200px) {
+			#carouselExampleControls {
+				max-width: 60%;
+				height: auto;
+				position: relative;
+				left: 35vh;
+				/* Let the content determine the height */
+			}
+		}
+
 
 		/* Larger carousel controls for better touch interaction */
 		.carousel-control-prev,
@@ -696,44 +779,36 @@
 			transform: translateY(-50%);
 		}
 
-		/* Make images responsive within the carousel */
-		.carousel-item img {
-			max-width: 100%;
-			height: auto;
-		}
 	</style>
-
-
-
-	<div class="container mt-5">
-		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active" data-bs-interval="000">
-					<img src="{% static 'images/cross1.png'%}" class="d-block w-100" alt="Slide 1">
+		<div class="container mt-5">
+			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active" data-bs-interval="000">
+						<img src="{% static 'images/cross1.png'%}" class="d-block w-100" alt="Slide 1">
+					</div>
+					<div class="carousel-item" data-bs-interval="2000">
+						<img src="{% static 'images/cross2.png'%}" class="d-block w-100" alt="Slide 2">
+					</div>
+					<div class="carousel-item" data-bs-interval="2000">
+						<img src="{% static 'images/cross3.png'%}" class="d-block w-100" alt="Slide 3">
+					</div>
+					<div class="carousel-item" data-bs-interval="2000">
+						<img src="{% static 'images/cross4.png'%}" class="d-block w-100" alt="Slide 4">
+					</div>
 				</div>
-				<div class="carousel-item" data-bs-interval="2000">
-					<img src="{% static 'images/cross2.png'%}" class="d-block w-100" alt="Slide 2">
-				</div>
-				<div class="carousel-item" data-bs-interval="2000">
-					<img src="{% static 'images/cross3.png'%}" class="d-block w-100" alt="Slide 3">
-				</div>
-				<div class="carousel-item" data-bs-interval="2000">
-					<img src="{% static 'images/cross4.png'%}" class="d-block w-100" alt="Slide 4">
-				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
 			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-				data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-				data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
 		</div>
 	</div>
-
 
 	<!-- Start Blog Section -->
 	<div class="blog-section">

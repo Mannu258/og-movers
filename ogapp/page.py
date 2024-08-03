@@ -111,7 +111,7 @@ def text(params):
 
     <p>Ready to simplify your move with expert packing services? Contact OG Movers today to discuss your packing needs and schedule your service. Let us handle the packing so you can enjoy a stress-free moving experience. Trust OG Movers to pack your belongings with care and precision, making your move smoother from start to finish.</p>
     """
-    
+
     text4 = """
     <style>
         /* Add your preferred styling here */
@@ -228,7 +228,7 @@ def text(params):
     <p>Ready to move your specialty items with care and precision? Contact OG Movers today to discuss your moving needs and schedule a consultation. Let our dedicated team of professionals handle your specialty item moving requirements with expertise and reliability. Trust OG Movers for exceptional service that exceeds your expectations.</p>
     
 """
-    FAQ = '''
+    FAQ = """
     <div class="scriptarea">
                 <div class="faq-container">
                     <script>
@@ -371,7 +371,31 @@ def text(params):
 
                 </div>
     
-    '''
+    """
+    about = """
+    <style>
+        h1 {
+            color: #0074D9;
+        }
+        p {
+            color: #333;
+        }
+    </style>
+
+
+        <h1>About Us</h1>
+        <p>Welcome to Adelaide’s premier removalist service! At OG Movers, we pride ourselves on delivering exceptional moving solutions tailored to your needs. Based in the heart of Adelaide, our team is dedicated to making your relocation as smooth and stress-free as possible.</p>
+        <p>With 5 years of experience in the industry, we specialize in a wide range of removal services including residential moves, commercial relocations, and furniture transportation. Our expert team is equipped with the skills and knowledge to handle all your moving requirements, ensuring that your belongings are safely and efficiently transported to your new location.</p>
+        <h2>What Sets Us Apart?</h2>
+        <ul>
+            <li><strong>Professional Team:</strong> Our movers are highly trained and committed to providing top-notch service. We handle your possessions with the utmost care and respect, ensuring they arrive at their destination in perfect condition.</li>
+            <li><strong>Comprehensive Services:</strong> From packing and unpacking to loading and unloading, we offer a complete suite of moving services. Whether you’re moving across town or across the state, we’ve got you covered.</li>
+            <li><strong>Customer Focused:</strong> Your satisfaction is our priority. We work closely with you to understand your unique needs and tailor our services accordingly. Our friendly team is always here to answer your questions and provide support throughout the moving process.</li>
+        </ul>
+        <p><strong>Please Note:</strong> While we offer a broad range of moving services, we do not provide storage solutions. However, we are happy to recommend trusted storage facilities in Adelaide if you need them.</p>
+        <p>Thank you for considering OG Movers for your moving needs. We look forward to making your next move a hassle-free experience. Contact us today for a quote or to discuss how we can assist you!</p>
+        <p>Let us help you move with confidence!</p>
+    """
     error = "Not Found"
     if params == "Service-Residential-Moving":
         return text1
@@ -387,5 +411,7 @@ def text(params):
         return text6
     elif params == "FAQ":
         return FAQ
+    elif params == "ABOUT":
+        return about
     else:
         return error
