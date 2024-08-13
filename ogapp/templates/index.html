@@ -126,6 +126,10 @@
 
 	<!-- Start Product Section -->
 	<style>
+		.untree_co-section {
+			padding: 1rem 0;
+		}
+
 		.my-element {
 			border: 2px solid #ccc;
 			/* Light grey border */
@@ -154,106 +158,138 @@
 		.img-fluid {
 			padding-left: -20px;
 		}
+
+
+
+		@keyframes shimmer {
+			from {
+				opacity: 0.8;
+			}
+
+			to {
+				opacity: 1;
+			}
+
+		}
+
+		.price {
+			font-size: 36px;
+			font-weight: bold;
+			color: #03a1fc;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+			display: inline-block;
+			margin: 10px 0;
+			text-decoration: none;
+			animation: shimmer 2s infinite alternate;
+		}
 	</style>
 	<div class="untree_co-section ">
 		<div class="container">
+			<div class="row justify-content-center">
+				<span class="price">
+					<h1>This Season! Limited Time Offer: Premium Services for $49/HH</h1>
+				</span>
+				<p>Ready for a hassle-free move? This season, grab our unbeatable deal: professional home
+					removals for just <span class="price p-1 m-1">$49!</span> Whether you're relocating to a new house
+					or just need to shift things
+					around, our expert team ensures a smooth and efficient process, without breaking the bank.
+					With top-notch service and unbeatable value, this limited-time offer guarantees your move
+					will be stress-free and budget-friendly. Don’t miss out—book now and experience top-quality
+					moving services at an incredible price. Move smart, save big, and enjoy your new space with
+					ease!</p>
+			</div>
+			<div class="col-md-8 col-lg-8 pb-4">
+				<div class="col-lg-7">
+					<div class="hero-img-wrap">
 
-			<div class="block">
-				<div class="row justify-content-center">
+						<img he src="{% static 'images/image.png'%}" class="img-fluid">
+					</div>
+				</div>
+
+				<form method="POST">
+					<div class="my-element">
+						<h1 style="color: #000;">Get a Quote for Free</h1>
 
 
-					<div class="col-md-8 col-lg-8 pb-4">
-						<div class="col-lg-7">
-							<div class="hero-img-wrap">
+						<div class="row">
+							<div class="col-6">
+								<div class="form-group">
+									<label class="text-black" for="fname">Name</label>
+									<input name="name" type="text" class="form-control" id="fname"
+										placeholder="Your Name" required>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="form-group">
+									<label class="text-black" for="lname">Number</label>
+									<input name="mobile" type="number" class="form-control" id="lname"
+										placeholder="eg.+61 123 456 789" required>
+								</div>
+							</div>
+						</div>
+						{% csrf_token %}
+						<div class="row">
+							<div class="col-6">
+								<div class="form-group">
+									<label class="text-black" for="fname">From Location</label>
+									<input type="text" name="froml" class="form-control" id="fname"
+										placeholder="From Location" required>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="form-group">
+									<label class="text-black" for="lname">To location</label>
+									<input type="text" name="tol" class="form-control" id="lname"
+										placeholder="To Location" required>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<div class="form-group">
+									<label class="text-black" for="fname">Price</label>
+									<select class="form-select" name="price" aria-label="Default select example"
+										required>
+										<option value="1001">One Bedroom Limited time offer 49$/HH</option>
+										<option value="1002">Two Bedrooms</option>
+										<option value="1003">Three Bedrooms</option>
+										<option value="1004">Four Bedrooms +</option>
+										<option value="1005">Few items</option>
+										<option value="1006">Piano</option>
+										<option value="1007">Pool Table</option>
 
-								<img he src="{% static 'images/image.png'%}" class="img-fluid">
+
+									</select>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="form-group">
+									<label class="text-black" name="date" for="date">Date</label>
+									<input type="date" name="date" class="form-control" id="date" required>
+								</div>
 							</div>
 						</div>
 
-						<form method="POST">
-							<div class="my-element">
-								<h1 style="color: #000;">Get a Quote for Free</h1>
+						<div class="form-group">
+							<label class="text-black" for="email">Email address</label>
+							<input type="email" name="email" class="form-control" id="email"
+								placeholder="Your@email.com" required>
+						</div>
 
-
-								<div class="row">
-									<div class="col-6">
-										<div class="form-group">
-											<label class="text-black" for="fname">Name</label>
-											<input name="name" type="text" class="form-control" id="fname"
-												placeholder="Your Name" required>
-										</div>
-									</div>
-									<div class="col-6">
-										<div class="form-group">
-											<label class="text-black" for="lname">Number</label>
-											<input name="mobile" type="number" class="form-control" id="lname"
-												placeholder="eg.+61 123 456 789" required>
-										</div>
-									</div>
-								</div>
-								{% csrf_token %}
-								<div class="row">
-									<div class="col-6">
-										<div class="form-group">
-											<label class="text-black" for="fname">From Location</label>
-											<input type="text" name="froml" class="form-control" id="fname"
-												placeholder="From Location" required>
-										</div>
-									</div>
-									<div class="col-6">
-										<div class="form-group">
-											<label class="text-black" for="lname">To location</label>
-											<input type="text" name="tol" class="form-control" id="lname"
-												placeholder="To Location" required>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-6">
-										<div class="form-group">
-											<label class="text-black" for="fname">Price</label>
-											<select class="form-select" name="price" aria-label="Default select example"
-												required>
-												<option value="1001">One Bedroom Limited time offer 49$/HH</option>
-												<option value="1002">Two Bedrooms</option>
-												<option value="1003">Three Bedrooms</option>
-												<option value="1004">Four Bedrooms +</option>
-												<option value="1005">Few items</option>
-												<option value="1006">Piano</option>
-												<option value="1007">Pool Table</option>
-
-
-											</select>
-										</div>
-									</div>
-									<div class="col-6">
-										<div class="form-group">
-											<label class="text-black" name="date" for="date">Date</label>
-											<input type="date" name="date" class="form-control" id="date" required>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="text-black" for="email">Email address</label>
-									<input type="email" name="email" class="form-control" id="email"
-										placeholder="Your@email.com" required>
-								</div>
-
-								<button type="submit" class="btn btn-primary-hover-outline m-3 md-4">Get a
-									Quote</button>
-							</div>
-						</form>
-
+						<button type="submit" class="btn btn-primary-hover-outline m-3 md-4">Get a
+							Quote</button>
 					</div>
-
-				</div>
+				</form>
 
 			</div>
 
 		</div>
-		<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-		<div class="elfsight-app-3133f632-949f-42af-9842-9530d3b1e34f" data-elfsight-app-lazy></div>
+
+	</div>
+
+	</div>
+	<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+	<div class="elfsight-app-3133f632-949f-42af-9842-9530d3b1e34f" data-elfsight-app-lazy></div>
 	</div>
 	</div>
 	<div class="product-section">
