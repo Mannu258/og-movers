@@ -71,7 +71,8 @@
 	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 		<div class="container">
-			<a class="navbar-brand" href="/">OG Movers<span>.</span></a>
+			<a href="/"><img class="navbar-brand" style="height: 60px; border-radius: 60px;" id="logo"
+					src="{% static 'logo.png' %}"></a>
 
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
 				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,13 +82,13 @@
 			<div class="collapse navbar-collapse" id="navbarsFurni">
 				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 					<li><a class="nav-link btn" target="_blank" href="tel:+61434653406">+61 434 653 406</a></li>
-					<li class="nav-item active">
-						<a class="nav-link" href="/">Home</a>
+					<li>
+						<a class="btn btn-warning" href="/">Home</a>
 					</li>
-					<li><a class="nav-link" href="{% url 'contact' %}">Contact us</a></li>
-					<li><a class="nav-link" href="{% url 'service' %}">Services</a></li>
-					<li><a class="nav-link" href=" {% url 'iservice' 'FAQ' %} ">FAQ</a></li>
-					<li><a class="nav-link" href="{% url 'iservice' 'ABOUT' %}">About us</a></li>
+					<li><a class="btn btn-warning" href="{% url 'contact' %}">Contact us</a></li>
+					<li><a class="btn btn-warning" href="{% url 'service' %}">Services</a></li>
+					<li><a class="btn btn-warning" href=" {% url 'iservice' 'FAQ' %} ">FAQ</a></li>
+					<li><a class="btn btn-warning" href="{% url 'iservice' 'ABOUT' %}">About us</a></li>
 				</ul>
 			</div>
 		</div>
@@ -101,11 +102,12 @@
 			<div class="row justify-content-between">
 				<div class="col-lg-5">
 					<div class="intro-excerpt">
-						<h1>Best removalist in Adelaide<span clsas="d-block"></span></h1>
-						<p style="color: #fff;" class="mb-4">Where Experience Meets Excellence in Relocation Solutions!
+						<h1 style="color: #000000;">Best removalist in Adelaide<span clsas="d-block"></span></h1>
+						<p style="color: #000000;" class="mb-4">For all of your relocation needs in Adelaide, we have
+							you covered.
 						</p>
 						<p><a href="{% url 'contact' %}" class="btn btn-secondary me-2">Get a Quote</a><a
-								target="_blank" href="tel:+61434653406" class="btn btn-white-outline">Call Us Now</a>
+								target="_blank" href="tel:+61434653406" class="btn btn-secondary">Call Us Now</a>
 						</p>
 					</div>
 				</div>
@@ -297,15 +299,20 @@
 			<div class="row">
 
 				<!-- Start Column 1 -->
+
 				<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-					<h2 class="mb-4 section-title">Specialty in Item Handling</h2>
+					<h2 class="mb-4 section-title">Quick Removal Specialist</h2>
 					<p class="mb-4">
-						Expert handling of delicate or valuable items such as antiques, pianos, artwork, and
-						electronics. </p>
+						Do you have an urgent need to relocate to Adelaide? Benefit from our quick and free same-day
+						removal service when you don't pay extra for reservations.. </p>
 					<p><a target="_blank"
 							href="https://api.whatsapp.com/send?phone=+61434653406&text=Hello%2C%20I%27m%20interested%20in%20your%20services."
 							class="btn">Contact Us</a></p>
 				</div><br>
+				<div id="dlr">
+					<h1 id="mainh1">Winter sale Limited time offer</h1><br>
+					<img class="responsive-imagess imgg" src="{% static 'images/dollor.png' %}" alt="">
+				</div>
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="{% url 'contact' %}">
 						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
@@ -504,10 +511,7 @@
 						padding: 0rem 0;
 					}
 				</style>
-				<div id="dlr">
-					<h1 id="mainh1">Winter sale Limited time offer</h1><br>
-					<img class="responsive-imagess imgg" src="{% static 'images/dollor.png' %}" alt="">
-				</div>
+
 
 			</div>
 
@@ -517,7 +521,7 @@
 	<!-- End Product Section -->
 
 	<!-- Start Why Choose Us Section -->
-	<div class="why-choose-section">
+	<div class="why-choose-section mt-5">
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-lg-6">
@@ -531,9 +535,9 @@
 								<div class="icon">
 									<img src="{% static 'images/truck.svg' %}" alt="Image" class="imf-fluid">
 								</div>
-								<h3>Fast &amp; Residential Moving</h3>
-								<p>Complete relocation assistance for households, ensuring a smooth transition to a new
-									home.</p>
+								<h3>&amp; Residential Moving</h3>
+								<p>Full household moving support, guaranteeing a seamless transfer to a new residence.
+								</p>
 							</div>
 						</div>
 
@@ -543,8 +547,8 @@
 									<img src="{% static 'images/building-fill.svg'%}" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Commercial Moving:</h3>
-								<p>Efficient and organized moving services for businesses, offices, and commercial
-									establishments.</p>
+								<p>Well-coordinated and effective moving services for enterprises such as offices and
+									corporations.</p>
 							</div>
 						</div>
 
@@ -553,9 +557,9 @@
 								<div class="icon">
 									<img src="{% static 'images/box.svg'%}" class="imf-fluid">
 								</div>
-								<h3>Packing Services</h3>
-								<p>Professional packing of belongings using high-quality materials to ensure their
-									safety during transportation.</p>
+								<h3>Always on time</h3>
+								<p>With us, your relocation will happen when you need it! That means no more worries
+									about late or postponed appointments..</p>
 							</div>
 						</div>
 
@@ -564,9 +568,9 @@
 								<div class="icon">
 									<img src="{% static 'images/truck-front-fill.svg'%}" alt="Image" class="imf-fluid">
 								</div>
-								<h3>Loading and Unloading:</h3>
-								<p>Skillful loading and unloading of items onto trucks or vans, handled with care to
-									prevent damage..</p>
+								<h3>Open-minded pricing:</h3>
+								<p>No additional costs are incurred; you simply pay what we quote. After the final
+									estimate, requesting further work may result in additional expenses...</p>
 							</div>
 						</div>
 
@@ -603,7 +607,15 @@
 						sustainability. Committed to excellence, we strive to be the preferred choice for individuals
 						and businesses alike, fostering a global community linked by efficient and ethical moving
 						practices. OGMovers seeks to inspire confidence, making every move a step toward a brighter,
-						more connected future.</p>
+						more connected future. <br><br>
+
+						Entire Adelaide Movers Providing Accuracy at Every Stage <br><br>
+
+						Two Expert Movers Available to Assist <br><br>
+
+						You can rely on our team of two skilled movers in Adelaide to handle your valuables with care
+						and efficiency during any transfer. So, for a stress-free relocation, you can unwind and let us
+						do the hard lifting.</p>
 
 
 					<ul class="list-unstyled custom-list my-4">
@@ -683,7 +695,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 mx-auto text-center">
-					<h2 class="section-title">Testimonials</h2>
+					<h2 class="section-title"></h2>
 				</div>
 			</div>
 
@@ -704,21 +716,15 @@
 
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
-												<p>&ldquo;I recently hired OG Movers to move my grandmother's antique
-													piano, which has been in our family for generations. I was nervous
-													about trusting anyone with such a precious heirloom, but the team at
-													OG Movers exceeded all my expectations. They treated the piano with
-													such reverence and respect, and I could tell they understood its
-													sentimental value. Thanks to them, the piano arrived at its new home
-													safely and intact. I can't thank them enough for their exceptional
-													service..&rdquo;</p>
+												<p>&ldquo;To find out how much our removalist service in Adelaide will
+													cost, fill out our estimate form or give us a call.&rdquo;</p>
 											</blockquote>
 
 											<div class="author-info">
 												<div class="author-pic">
 													<!-- <img src="{% static 'images/person-1.png'%}" alt="Maria Jones" class="img-fluid"> -->
 												</div>
-												<h3 class="font-weight-bold">Sara Adam</h3>
+												<h3 class="font-weight-bold">Obtain a moving estimate </h3>
 												<!-- <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span> -->
 											</div>
 										</div>
@@ -734,19 +740,16 @@
 
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
-												<p>&ldquo;Moving a piano can be a stressful experience, but thanks to OG
-													Movers, it was completely hassle-free. From the moment I contacted
-													them, I knew I was in good hands. The team arrived on time, handled
-													my piano with the utmost care, and delivered it to my new home
-													without a scratch. I'm so grateful for their professionalism and
-													attention to detail..&rdquo;</p>
+												<p>&ldquo;If the removal quote fulfills your needs, schedule our
+													removalist service by getting in touch with us or responding to the
+													quote email...&rdquo;</p>
 											</blockquote>
 
 											<div class="author-info">
 												<div class="author-pic">
 													<!-- <img src="{% static 'images/person-1.png'%}" alt="Maria Jones" class="img-fluid"> -->
 												</div>
-												<h3 class="font-weight-bold">John smith</h3>
+												<h3 class="font-weight-bold">Plan your relocation</h3>
 												<!-- <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span> -->
 											</div>
 										</div>
@@ -762,18 +765,15 @@
 
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
-												<p>&ldquo; was incredibly impressed with the professionalism and
-													expertise of the team at OG Movers. They moved my piano with such
-													care and precision, it was clear they knew exactly what they were
-													doing. I couldn't be happier with the service, and I highly
-													recommend them to anyone in need of piano moving!.&rdquo;</p>
+												<p>&ldquo; Our removalists in Adelaide will carefully pack and move your
+													belongings to your new address.!.&rdquo;</p>
 											</blockquote>
 
 											<div class="author-info">
 												<div class="author-pic">
 													<!-- <img src="{% static 'images/person-1.png'%}" alt="Maria Jones" class="img-fluid"> -->
 												</div>
-												<h3 class="font-weight-bold">Robot dony</h3>
+												<h3 class="font-weight-bold">Go ahead</h3>
 											</div>
 										</div>
 
