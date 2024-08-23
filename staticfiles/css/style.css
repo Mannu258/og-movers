@@ -39,7 +39,7 @@ a.more {
 }
 
 .custom-navbar {
-  background: #3b5d50 !important;
+  background: #021EEE !important;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -73,12 +73,15 @@ a.more {
 
 .custom-navbar .custom-navbar-nav li a {
   font-weight: 500;
-  color: #ffffff !important;
-  opacity: .5;
+  color: #000000 !important;
+  opacity: 1.5;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
   position: relative;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -96,6 +99,7 @@ a.more {
     -webkit-transition: .15s all ease-out;
     -o-transition: .15s all ease-out;
     transition: .15s all ease-out;
+    background-color: yellow;
   }
 }
 
@@ -139,7 +143,7 @@ a.more {
 }
 
 .hero {
-  background: #3b5d50;
+  /* background: #FDE73F; */
   padding: calc(4rem - 30px) 0 0rem 0;
 }
 
@@ -238,15 +242,15 @@ a.more {
   font-weight: 600;
   padding: 12px 30px;
   border-radius: 30px;
-  color: #ffffff;
-  background: #2f2f2f;
-  border-color: #2f2f2f;
+  color: #000000;
+  background: #f9bf29;
+  border-color: #f9bf29;
 }
 
 .btn:hover {
   color: #ffffff;
-  background: #222222;
-  border-color: #222222;
+  background: #f9bf29;
+  border-color: #f9bf29;
 }
 
 .btn:active,
@@ -278,7 +282,6 @@ a.more {
 }
 
 .btn.btn-white-outline {
-  background: transparent;
   border-width: 2px;
   border-color: rgba(255, 255, 255, 0.3);
 }
@@ -293,7 +296,7 @@ a.more {
 }
 
 .product-section {
-  padding: 7rem 0;
+  padding: 0rem 0;
 }
 
 .product-section .product-item {
@@ -401,7 +404,7 @@ a.more {
   content: "";
   width: 255px;
   height: 217px;
-  background-image: url("../images/dots-yellow.svg");
+  /* background-image: url("../images/dots-yellow.svg"); */
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-transform: translate(-40%, -40%);
@@ -712,7 +715,7 @@ a.more {
 }
 
 .blog-section {
-  padding: 7rem 0 12rem 0;
+  padding: 0rem 0 0rem 0;
 }
 
 .blog-section .post-entry a {
@@ -1097,8 +1100,10 @@ body {
 
 .service-logos {
   display: flex;
-  justify-content: center; /* Center the items horizontally */
-  align-items: center; /* Center the items vertically */
+  justify-content: center;
+  /* Center the items horizontally */
+  align-items: center;
+  /* Center the items vertically */
   margin-bottom: 10px;
 }
 
@@ -1110,9 +1115,14 @@ body {
 
 .service-card {
   /* Existing styles */
-  background-color: #f9f9f9;
   /* Change this color as desired */
 }
-.service-footer{
+
+.service-footer {
   margin-top: -90px;
+}
+
+.custom-navbar .custom-navbar-nav li a.btn.btn-secondary {
+  background-color: #f9f9f9;
+  color: #ffffff;
 }
