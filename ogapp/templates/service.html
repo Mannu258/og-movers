@@ -54,18 +54,18 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarsFurni">
-				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-					<li><a class="nav-link btn" target="_blank" href="tel:+61434653406">+61 434 653 406</a></li>
-					<li>
-						<a class="btn btn-warning" href="/">Home</a>
-					</li>
-					<li><a class="btn btn-warning" href="{% url 'contact' %}">Contact us</a></li>
-					<li><a class="btn btn-warning" href="{% url 'service' %}">Services</a></li>
-					<li><a class="btn btn-warning" href=" {% url 'iservice' 'FAQ' %} ">FAQ</a></li>
-					<li><a class="btn btn-warning" href="{% url 'iservice' 'ABOUT' %}">About us</a></li>
-				</ul>
-			</div>
-		</div>
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li><a class="nav-link btn" target="_blank" href="tel:+61434653406">+61 434 653 406</a></li>
+                    <li>
+                        <a class="btn btn-warning" href="/">Home</a>
+                    </li>
+                    <li><a class="btn btn-warning" href="{% url 'contact' %}">Contact us</a></li>
+                    <li><a class="btn btn-warning" href="{% url 'service' %}">Services</a></li>
+                    <li><a class="btn btn-warning" href=" {% url 'iservice' 'FAQ' %} ">FAQ</a></li>
+                    <li><a class="btn btn-warning" href="{% url 'iservice' 'ABOUT' %}">About us</a></li>
+                </ul>
+            </div>
+        </div>
         </div>
     </nav>
     </a>
@@ -91,6 +91,9 @@
                 padding: 1rem;
                 max-width: 800px;
                 /* Adjust the max-width as needed */
+            }
+            body{
+                background-color: #ffffff;
             }
         </style>
         <a href="tel:+61434653406" class="fixed-button whatsapp-button">
@@ -197,55 +200,32 @@
                     <div class="col-md-6">
                         <!-- Column 2 -->
                         <div class="service-description">
-                            <div class="service-header">4. Loading and Unloading</div>
+                            <div class="service-header">4. Same Day Removals</div>
                             <img class="w-100 container-3d" src="{% static 'images/service-image/loading.png' %}"
                                 alt="">
 
-                            <p>OG Movers provides expert loading and unloading services to ensure your belongings
-                                are
-                                handled with care from start to finish. Whether you're moving locally or
-                                long-distance,
-                                our trained movers are skilled in efficiently loading your items into our trucks
-                                using
-                                proper equipment and techniques. Upon arrival at your new location, our team
-                                carefully
-                                unloads your items, placing them in designated rooms as per your instructions. We
-                                handle
-                                heavy lifting and maneuvering, allowing you to settle into your new space without
-                                the
-                                stress of unpacking on your own. Trust OG Movers for professional loading and
-                                unloading
-                                moving experience that exceeds your expectations..
-                                services that make your move smooth and worry-free..</p><a class="btn btn-dark-outline"
+                            <p>Experience a seamless transition with our Same Day Removals service! When time is of the
+                                essence and you need to move swiftly, we’re here to ensure your relocation is handled
+                                with speed and precision. Our dedicated team of professionals is equipped to manage all
+                                aspects of your move on the same day, from packing and loading to transportation and
+                                unloading.</p><a class="btn btn-dark-outline"
                                 href="{% url 'iservice' 'Service-Loading-Unloading-Services' %}">Read More</a>
                         </div>
                         <div class="service-description">
-                            <div class="service-header">5. Long-Distance Moving</div>
+                            <div class="service-header">5.Transparent Pricing Moving</div>
                             <img class="w-100 container-3d"
                                 src="{% static 'images/service-image/distance moving.png' %}" alt="">
 
-                            <p>OG Movers specializes in long-distance moves, providing comprehensive services to
-                                ensure
-                                a seamless transition to your new location. Whether you're relocating across state
-                                lines
-                                or to a different part of the country, our experienced team is dedicated to
-                                delivering
-                                your belongings safely and on time. We begin with a detailed planning process
-                                tailored
-                                to your specific needs and timeline. Our professional movers handle all aspects of
-                                your
-                                move, from expert packing and secure loading to efficient transportation in our
-                                well-maintained trucks equipped for long-distance travel. Throughout the journey, we
-                                prioritize communication and transparency, keeping you informed every step of the
-                                way.
-                                moving experience that exceeds your expectations..</p> <a class="btn btn-dark-outline"
+                            <p>At OG Movers, we believe in clarity and honesty when it comes to pricing. Our Transparent
+                                Pricing policy ensures that you know exactly what to expect with no hidden fees or
+                                unexpected charges. From the initial quote to the final invoice, every detail is clearly
+                                outlined and communicated upfront...</p> <a class="btn btn-dark-outline"
                                 href="{% url 'iservice' 'Service-Long-Distance-Moving' %}">Read More</a>
                         </div>
                         <div class="service-description">
                             <div class="service-header">6. Specialty Item Moving</div>
                             <img class="w-100 container-3d" src="{% static 'images/service-image/Speciality.png' %}"
                                 alt="">
-
                             <p>OG Movers understands that certain items require extra care and attention during a
                                 move.
                                 Whether you have delicate antiques, valuable artwork, pianos, or bulky furniture,
@@ -270,6 +250,13 @@
             </div>
         </div>
     </main>
+        <div class="container">
+                    <a target="_blank" href="https://g.co/kgs/TNhBvCG"><img src="{% static 'images/scrol.png' %}" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+
+    
 
     <!-- Start Footer Section -->
     <footer class="footer-section">

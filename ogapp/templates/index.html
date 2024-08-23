@@ -89,6 +89,8 @@
 					<li><a class="btn btn-warning" href="{% url 'service' %}">Services</a></li>
 					<li><a class="btn btn-warning" href=" {% url 'iservice' 'FAQ' %} ">FAQ</a></li>
 					<li><a class="btn btn-warning" href="{% url 'iservice' 'ABOUT' %}">About us</a></li>
+					<li><a href="{% url 'contact' %}" class="btn btn-warning">Get a Quote</a></li>
+
 				</ul>
 			</div>
 		</div>
@@ -97,35 +99,160 @@
 	<a href="tel:+61434653406" class="fixed-button whatsapp-button">
 		<i class="bi bi-telephone-fill"></i>
 	</a>
-	<div class="hero">
-		<div class="container">
-			<div class="row justify-content-between">
-				<div class="col-lg-5">
-					<div class="intro-excerpt">
-						<h1 style="color: #000000;">Best removalist in Adelaide<span clsas="d-block"></span></h1>
-						<p style="color: #000000;" class="mb-4">For all of your relocation needs in Adelaide, we have
-							you covered.
-						</p>
-						<p><a href="{% url 'contact' %}" class="btn btn-secondary me-2">Get a Quote</a><a
-								target="_blank" href="tel:+61434653406" class="btn btn-secondary">Call Us Now</a>
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-7">
+	<style>
+		#background-img {
+			background-image: url('static/images/Background.jpg');
+			/* Replace 'image.png' with the actual path to your image */
+			background-size: cover;
+			/* Adjust as needed (cover, contain, etc.) */
+			background-repeat: no-repeat;
+		}
+	</style>
+	<section>
+		<div id="background-img">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
 					<div class="hero-img-wrap">
-						<!-- <video autoplay muted loop id="myVideo">
+						<h1 class="text-center">
+							<span class="text-primary font-weight-bold animated-text">From door to door, we’ve got
+								your move
+								covered with care and precision.</span>
+							<br>
+							<span class="text-success font-italic">Get a fast and free quote<br>Takes just 30
+								seconds</span>
+							<style>
+								/* Custom CSS for animation */
+								.animated-text {
+									animation: pulse 2s infinite;
+								}
+
+								@keyframes pulse {
+									0% {
+										transform: scale(1);
+									}
+
+									50% {
+										transform: scale(1.1);
+									}
+
+									100% {
+										transform: scale(1);
+									}
+								}
+							</style>
+						</h1>
+					</div>
+
+					<div class="my-element">
+						<form method="POST">
+							<h1 style="color: #000;">Get a Quote for Free</h1>
+
+
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="fname">Name</label>
+										<input name="name" type="text" class="form-control" id="fname"
+											placeholder="Your Name" required>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="lname">Number</label>
+										<input name="mobile" type="number" class="form-control" id="lname"
+											placeholder="eg.+61 123 456 789" required>
+									</div>
+								</div>
+							</div>
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="fname">From Location</label>
+										<input type="text" name="froml" class="form-control" id="fname"
+											placeholder="From Location" required>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="lname">To location</label>
+										<input type="text" name="tol" class="form-control" id="lname"
+											placeholder="To Location" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="fname">Price</label>
+										<select class="form-select" name="price" aria-label="Default select example"
+											required>
+											<option value="1001">49$/HH Limited time offer One Bedroom</option>
+											<option value="1002">Two Bedrooms</option>
+											<option value="1003">Three Bedrooms</option>
+											<option value="1004">Four Bedrooms +</option>
+											<option value="1005">Few items</option>
+											<option value="1006">Piano</option>
+											<option value="1007">Pool Table</option>
+
+
+										</select>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" name="date" for="date">Date</label>
+										<input type="date" name="date" class="form-control" id="date" required>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="text-black" for="email">Email address</label>
+								<input type="email" name="email" class="form-control" id="email"
+									placeholder="Your@email.com" required>
+							</div>
+
+							<button type="submit" class="btn btn-primary-hover-outline m-3 md-4">Get a
+								Quote</button>
+					</div>
+					</form>
+				</div>
+
+				<div class="hero">
+					<div class="container">
+						<div class="row justify-content-between">
+							<div class="col-lg-5">
+								<div class="intro-excerpt">
+									<h1 style="color: #ffffff;">Reliable and Reasonably Priced Removalists in
+										Adelaide<span clsas="d-block"></span></h1>
+									<p style="color: #ffffff;" class="mb-4">For all of your relocation needs in
+										Adelaide, we
+										have
+										you covered.
+									</p>
+									<p><a href="{% url 'contact' %}" class="btn btn-secondary me-2">Get a Quote</a><a
+											target="_blank" href="tel:+61434653406" class="btn btn-secondary">Call Us
+											Now</a>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-7">
+								<div class="hero-img-wrap">
+									<!-- <video autoplay muted loop id="myVideo">
 							<source src= "{% static 'OG Movers and Packers.mp4'%} " type="video/mp4">
 							Your browser does not support HTML5 video.
 						  </video> -->
-
-						<img he src="{% static 'images/couch.png'%}" class="img-fluid">
+									<!-- <img he src="{% static 'images/couch.png'%}" class="img-fluid"> -->
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-
+		</div>
+	</section>
 	<!-- Start Product Section -->
 	<style>
 		.untree_co-section {
@@ -200,106 +327,15 @@
 					moving services at an incredible price. Move smart, save big, and enjoy your new space with
 					ease!</p>
 			</div>
-			<div class="col-md-8 col-lg-8 pb-4">
-				<div class="col-lg-7">
-					<div class="hero-img-wrap">
-
-						<img he src="{% static 'images/image.png'%}" class="img-fluid">
-					</div>
-				</div>
-
-				<form method="POST">
-					<div class="my-element">
-						<h1 style="color: #000;">Get a Quote for Free</h1>
-
-
-						<div class="row">
-							<div class="col-6">
-								<div class="form-group">
-									<label class="text-black" for="fname">Name</label>
-									<input name="name" type="text" class="form-control" id="fname"
-										placeholder="Your Name" required>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="form-group">
-									<label class="text-black" for="lname">Number</label>
-									<input name="mobile" type="number" class="form-control" id="lname"
-										placeholder="eg.+61 123 456 789" required>
-								</div>
-							</div>
-						</div>
-						{% csrf_token %}
-						<div class="row">
-							<div class="col-6">
-								<div class="form-group">
-									<label class="text-black" for="fname">From Location</label>
-									<input type="text" name="froml" class="form-control" id="fname"
-										placeholder="From Location" required>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="form-group">
-									<label class="text-black" for="lname">To location</label>
-									<input type="text" name="tol" class="form-control" id="lname"
-										placeholder="To Location" required>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6">
-								<div class="form-group">
-									<label class="text-black" for="fname">Price</label>
-									<select class="form-select" name="price" aria-label="Default select example"
-										required>
-										<option value="1001">One Bedroom Limited time offer 49$/HH</option>
-										<option value="1002">Two Bedrooms</option>
-										<option value="1003">Three Bedrooms</option>
-										<option value="1004">Four Bedrooms +</option>
-										<option value="1005">Few items</option>
-										<option value="1006">Piano</option>
-										<option value="1007">Pool Table</option>
-
-
-									</select>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="form-group">
-									<label class="text-black" name="date" for="date">Date</label>
-									<input type="date" name="date" class="form-control" id="date" required>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="text-black" for="email">Email address</label>
-							<input type="email" name="email" class="form-control" id="email"
-								placeholder="Your@email.com" required>
-						</div>
-
-						<button type="submit" class="btn btn-primary-hover-outline m-3 md-4">Get a
-							Quote</button>
-					</div>
-				</form>
-
-			</div>
 
 		</div>
-
-	</div>
-
-	</div>
-	<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-	<div class="elfsight-app-3133f632-949f-42af-9842-9530d3b1e34f" data-elfsight-app-lazy></div>
+		<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+		<div class="elfsight-app-3133f632-949f-42af-9842-9530d3b1e34f" data-elfsight-app-lazy></div>
 	</div>
 	</div>
 	<div class="product-section">
 		<div class="container">
 			<div class="row">
-
-				<!-- Start Column 1 -->
-
 				<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
 					<h2 class="mb-4 section-title">Quick Removal Specialist</h2>
 					<p class="mb-4">
@@ -344,39 +380,6 @@
 
 								<p>Assistance with Assembly and Disassembly</p>
 								<hr id="HR">
-								<style>
-									#HR {
-										margin-top: 5px;
-										margin-bottom: 5px;
-									}
-
-									#HR {
-										height: 2px;
-										border: none;
-										border-top: 3px dotted #0074D9;
-										background-color: #00008B;
-										animation: stretch 1s infinite alternate;
-									}
-
-									@keyframes stretch {
-										from {
-											width: 0;
-										}
-
-										to {
-											width: 100%;
-										}
-									}
-
-									strong {
-										font-size: larger;
-									}
-
-									#price-dollor {
-										font-weight: bolder;
-										font-size: 3rem;
-									}
-								</style>
 
 							</div>
 							<div class="service-footer">
@@ -385,7 +388,40 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				<style>
+					#HR {
+						margin-top: 5px;
+						margin-bottom: 5px;
+					}
+
+					#HR {
+						height: 2px;
+						border: none;
+						border-top: 3px dotted #0074D9;
+						background-color: #00008B;
+						animation: stretch 1s infinite alternate;
+					}
+
+					@keyframes stretch {
+						from {
+							width: 0;
+						}
+
+						to {
+							width: 100%;
+						}
+					}
+
+					strong {
+						font-size: larger;
+					}
+
+					#price-dollor {
+						font-weight: bolder;
+						font-size: 3rem;
+					}
+				</style>
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 ">
 					<a class="product-item" href="{% url 'contact' %}">
 						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
 							<div class="service-logos">
@@ -517,7 +553,6 @@
 
 		</div>
 	</div>
-
 	<!-- End Product Section -->
 
 	<!-- Start Why Choose Us Section -->
@@ -526,7 +561,8 @@
 			<div class="row justify-content-between">
 				<div class="col-lg-6">
 					<h2 class="section-title">Why Choose Us</h2>
-					<p>We're dedicated to seamless transitions, offering top-notch moving services with a focus on
+					<p>We're dedicated to seamless transitions, offering top-notch moving services with a
+						focus on
 						trust, professionalism, and customer satisfaction. Your journey, our priority</p>
 
 					<div class="row my-5">
@@ -536,7 +572,8 @@
 									<img src="{% static 'images/truck.svg' %}" alt="Image" class="imf-fluid">
 								</div>
 								<h3>&amp; Residential Moving</h3>
-								<p>Full household moving support, guaranteeing a seamless transfer to a new residence.
+								<p>Full household moving support, guaranteeing a seamless transfer to a new
+									residence.
 								</p>
 							</div>
 						</div>
@@ -547,7 +584,8 @@
 									<img src="{% static 'images/building-fill.svg'%}" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Commercial Moving:</h3>
-								<p>Well-coordinated and effective moving services for enterprises such as offices and
+								<p>Well-coordinated and effective moving services for enterprises such as
+									offices and
 									corporations.</p>
 							</div>
 						</div>
@@ -558,7 +596,8 @@
 									<img src="{% static 'images/box.svg'%}" class="imf-fluid">
 								</div>
 								<h3>Always on time</h3>
-								<p>With us, your relocation will happen when you need it! That means no more worries
+								<p>With us, your relocation will happen when you need it! That means no more
+									worries
 									about late or postponed appointments..</p>
 							</div>
 						</div>
@@ -569,8 +608,10 @@
 									<img src="{% static 'images/truck-front-fill.svg'%}" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Open-minded pricing:</h3>
-								<p>No additional costs are incurred; you simply pay what we quote. After the final
-									estimate, requesting further work may result in additional expenses...</p>
+								<p>No additional costs are incurred; you simply pay what we quote. After the
+									final
+									estimate, requesting further work may result in additional expenses...
+								</p>
 							</div>
 						</div>
 
@@ -601,20 +642,27 @@
 				</div>
 				<div class="col-lg-5 ps-lg-5">
 					<h2 class="section-title mb-4">Our Vision & Mission</h2>
-					<p>OGMovers envisions a seamless world of transitions where relocation is a stress-free experience.
-						Our mission is to redefine moving through innovation, reliability, and customer-centric
+					<p>OGMovers envisions a seamless world of transitions where relocation is a stress-free
+						experience.
+						Our mission is to redefine moving through innovation, reliability, and
+						customer-centric
 						solutions. We aim to set industry benchmarks, prioritizing client satisfaction and
-						sustainability. Committed to excellence, we strive to be the preferred choice for individuals
-						and businesses alike, fostering a global community linked by efficient and ethical moving
-						practices. OGMovers seeks to inspire confidence, making every move a step toward a brighter,
+						sustainability. Committed to excellence, we strive to be the preferred choice for
+						individuals
+						and businesses alike, fostering a global community linked by efficient and ethical
+						moving
+						practices. OGMovers seeks to inspire confidence, making every move a step toward a
+						brighter,
 						more connected future. <br><br>
 
 						Entire Adelaide Movers Providing Accuracy at Every Stage <br><br>
 
 						Two Expert Movers Available to Assist <br><br>
 
-						You can rely on our team of two skilled movers in Adelaide to handle your valuables with care
-						and efficiency during any transfer. So, for a stress-free relocation, you can unwind and let us
+						You can rely on our team of two skilled movers in Adelaide to handle your valuables
+						with care
+						and efficiency during any transfer. So, for a stress-free relocation, you can unwind
+						and let us
 						do the hard lifting.</p>
 
 
@@ -623,11 +671,15 @@
 							&nbsp;&nbsp;&nbsp;&nbsp;<span>Vision</span><span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Mission</span>
 						</h2>
 
-						<li><b>Customer Satisfaction</b></li>&nbsp;&nbsp;&nbsp;&nbsp;
-						<li><b>Setting Industry Standards</b> </li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li><b>Thick blankets will be used to protect your belongings.</b></li>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<li><b>We employ the most modern and secure packaging boxes.</b> </li>
+						&nbsp;&nbsp;&nbsp;&nbsp;
 
-						<li><b>Customer Centric Excellence </b></li>&nbsp;&nbsp;&nbsp;&nbsp;
-						<li><b>Reliability and Trust </b></li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li><b>We verify the precise times of delivery and collection. </b></li>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<li><b>At no extra cost, protection for your belongings is included.</b></li>
+						&nbsp;&nbsp;&nbsp;&nbsp;
 					</ul>
 					<a href="{% url 'service' %}" class="btn">Explore</a>
 
@@ -649,7 +701,8 @@
 						</div>
 						<div class="pt-3">
 							<h3>Packing Supplies</h3>
-							<p>Provision of packing materials such as boxes, tape, bubble wrap, and labels for DIY
+							<p>Provision of packing materials such as boxes, tape, bubble wrap, and labels
+								for DIY
 								packing or additional protection. </p>
 							<p><a href="{% url 'service' %}">Read More</a></p>
 						</div>
@@ -663,7 +716,8 @@
 						</div>
 						<div class="pt-3">
 							<h3>Local Moving</h3>
-							<p>Relocation services within the same city or area, tailored to meet the specific needs of
+							<p>Relocation services within the same city or area, tailored to meet the
+								specific needs of
 								local moves. </p>
 							<p><a href="{% url 'service' %}">Read More</a></p>
 						</div>
@@ -677,8 +731,10 @@
 						</div>
 						<div class="pt-3">
 							<h3>Specialized Equipment</h3>
-							<p>We utilize specialized equipment such as piano dollies, straps, and padding to securely
-								lift and transport pianos without causing damage to the instrument or surrounding
+							<p>We utilize specialized equipment such as piano dollies, straps, and padding
+								to securely
+								lift and transport pianos without causing damage to the instrument or
+								surrounding
 								property. </p>
 							<p><a href="{% url 'service' %}">Read More</a></p>
 						</div>
@@ -715,16 +771,19 @@
 									<div class="col-lg-8 mx-auto">
 
 										<div class="testimonial-block text-center">
+											<h3 class="font-weight-bold" style="color: #000; font-weight: 800;">Obtain a
+												moving estimate </h3>
 											<blockquote class="mb-5">
-												<p>&ldquo;To find out how much our removalist service in Adelaide will
-													cost, fill out our estimate form or give us a call.&rdquo;</p>
+												<p>&ldquo;To find out how much our removalist service in
+													Adelaide will
+													cost, fill out our estimate form or give us a
+													call.&rdquo;</p>
 											</blockquote>
 
 											<div class="author-info">
 												<div class="author-pic">
 													<!-- <img src="{% static 'images/person-1.png'%}" alt="Maria Jones" class="img-fluid"> -->
 												</div>
-												<h3 class="font-weight-bold">Obtain a moving estimate </h3>
 												<!-- <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span> -->
 											</div>
 										</div>
@@ -739,9 +798,13 @@
 									<div class="col-lg-8 mx-auto">
 
 										<div class="testimonial-block text-center">
+											<h3 class="font-weight-bold" style="color: #000; font-weight: 800;">Plan
+												your relocation</h3>
 											<blockquote class="mb-5">
-												<p>&ldquo;If the removal quote fulfills your needs, schedule our
-													removalist service by getting in touch with us or responding to the
+												<p>&ldquo;If the removal quote fulfills your needs, schedule
+													our
+													removalist service by getting in touch with us or
+													responding to the
 													quote email...&rdquo;</p>
 											</blockquote>
 
@@ -749,7 +812,6 @@
 												<div class="author-pic">
 													<!-- <img src="{% static 'images/person-1.png'%}" alt="Maria Jones" class="img-fluid"> -->
 												</div>
-												<h3 class="font-weight-bold">Plan your relocation</h3>
 												<!-- <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span> -->
 											</div>
 										</div>
@@ -764,8 +826,11 @@
 									<div class="col-lg-8 mx-auto">
 
 										<div class="testimonial-block text-center">
+											<h3 class="font-weight-bold" style="color: #000; font-weight: 800;">Go ahead
+											</h3>
 											<blockquote class="mb-5">
-												<p>&ldquo; Our removalists in Adelaide will carefully pack and move your
+												<p>&ldquo; Our removalists in Adelaide will carefully pack
+													and move your
 													belongings to your new address.!.&rdquo;</p>
 											</blockquote>
 
@@ -773,7 +838,6 @@
 												<div class="author-pic">
 													<!-- <img src="{% static 'images/person-1.png'%}" alt="Maria Jones" class="img-fluid"> -->
 												</div>
-												<h3 class="font-weight-bold">Go ahead</h3>
 											</div>
 										</div>
 
@@ -849,18 +913,18 @@
 	<div class="container mt-5">
 		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">
-				<div class="carousel-item active" data-bs-interval="000">
+				<div class="carousel-item active" data-bs-interval="1000">
 					<img src="{% static 'images/cross1.png'%}" class="d-block w-100" alt="Slide 1">
 				</div>
-				<div class="carousel-item" data-bs-interval="2000">
+				<div class="carousel-item" data-bs-interval="1000">
 					<img src="{% static 'images/cross2.png'%}" class="d-block w-100" alt="Slide 2">
 				</div>
-				<div class="carousel-item" data-bs-interval="2000">
+				<div class="carousel-item" data-bs-interval="1000">
 					<img src="{% static 'images/cross3.png'%}" class="d-block w-100" alt="Slide 3">
 				</div>
-				<div class="carousel-item" data-bs-interval="2000">
+				<!-- <div class="carousel-item" data-bs-interval="1000">
 					<img src="{% static 'images/cross4.png'%}" class="d-block w-100" alt="Slide 4">
-				</div>
+				</div> -->
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
 				data-bs-slide="prev">
@@ -893,7 +957,8 @@
 								class="img-fluid"></a>
 						<div class="post-content-entry">
 							<h3><a href="#"></a>Packing Supplies Provision </h3>
-							<p class="p">From Boxes to Bubble Wrap, We Provide Everything You Need for Stress-Free
+							<p class="p">From Boxes to Bubble Wrap, We Provide Everything You Need for
+								Stress-Free
 								Packing and
 								Moving.</p>
 
@@ -907,7 +972,8 @@
 								class="img-fluid"></a>
 						<div class="post-content-entry">
 							<h3><a href="#">Fragile Item Handling</a></h3>
-							<p class="p">Handle with Care: Your One-Stop Shop for Packing Supplies for Fragile Items</p>
+							<p class="p">Handle with Care: Your One-Stop Shop for Packing Supplies for Fragile
+								Items</p>
 						</div>
 					</div>
 				</div>
@@ -918,7 +984,8 @@
 								class="img-fluid"></a>
 						<div class="post-content-entry">
 							<h3><a href="#">Heavy item Moving</a></h3>
-							<p class="p">Effortlessly Move Heavy Items with Our Robust Packing and Moving Supplies</p>
+							<p class="p">Effortlessly Move Heavy Items with Our Robust Packing and Moving
+								Supplies</p>
 						</div>
 					</div>
 				</div>
@@ -984,7 +1051,8 @@
 			<h1 class="btn btn-dark h1s" onclick="toggleParagraph('local-long-distance-details')">Local and
 				Long-Distance Moves</h1>
 			<p id="local-long-distance-details" style="display: none;">
-				Yes, we provide both local and long-distance moving services to accommodate various relocation needs.
+				Yes, we provide both local and long-distance moving services to accommodate various relocation
+				needs.
 			</p>
 			<hr>
 		</div>
@@ -1005,17 +1073,23 @@
 						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Elevating Relocation
 								Experiences
 								with Expertise and Care!<span>.</span></a></div>
-						<p class="mb-4">At OG Movers, we are dedicated to making your move as smooth and stress-free as
+						<p class="mb-4">At OG Movers, we are dedicated to making your move as smooth and
+							stress-free as
 							possible. With years of experience in the moving industry, we pride ourselves on
 							reliability,
-							professionalism, and exceptional customer service. Whether you're moving across town or
+							professionalism, and exceptional customer service. Whether you're moving across town
+							or
 							across
-							the country, our team of skilled movers is committed to handling your belongings with care
+							the country, our team of skilled movers is committed to handling your belongings
+							with care
 							and
-							ensuring a seamless transition to your new home or office. From packing and transportation
+							ensuring a seamless transition to your new home or office. From packing and
+							transportation
 							to
-							unpacking and setup, we offer a full range of moving services tailored to meet your unique
-							needs. Trust OG Movers to deliver quality service and peace of mind for your next move..</p>
+							unpacking and setup, we offer a full range of moving services tailored to meet your
+							unique
+							needs. Trust OG Movers to deliver quality service and peace of mind for your next
+							move..</p>
 
 						<ul class="list-unstyled custom-social">
 							<h3 class="h3">Follow us on</h3>
@@ -1039,7 +1113,8 @@
 									<li><iframe
 											src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59644446.984194264!2d91.5130743!3d-24.157415!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa20ad3b42d0d0245%3A0x3f36b978203408ab!2sOG%20Movers!5e0!3m2!1sen!2sin!4v1714326969689!5m2!1sen!2sin"
 											width="340" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-											referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+											referrerpolicy="no-referrer-when-downgrade"></iframe>
+									</li>
 									<!--<li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509577!2d144.95373531544364!3d-37.817209979751984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0c93b70926705%3A0x1c033657a35104f0!2sAdelaide+SA+5000,+Australia!5e0!3m2!1sen!2sau!4v1630291924470!5m2!1sen!2sau" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
 									</li>
 								</ul>
