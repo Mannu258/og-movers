@@ -15,9 +15,9 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 28px;
-  color: #6a6a6a;
+  color: #000000;
   font-size: 14px;
-  background-color: #eff2f1;
+  background-color: #ffffff;
 }
 
 a {
@@ -39,7 +39,7 @@ a.more {
 }
 
 .custom-navbar {
-  background: #021EEE !important;
+  background: #89dfe8 !important;
   padding-top: 20px;
   padding-bottom: 20px;
 }

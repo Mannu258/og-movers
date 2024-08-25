@@ -107,46 +107,59 @@
 			/* Adjust as needed (cover, contain, etc.) */
 			background-repeat: no-repeat;
 		}
+		.bgg{
+			background-image: url('static/images/c-form.jpeg');
+			background-size: cover;
+			/* Adjust as needed (cover, contain, etc.) */
+			background-repeat: no-repeat;
+		}
+		.text-black{
+			color: black;
+		}
 	</style>
 	<section>
 		<div id="background-img">
+			<div class="hero">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-5">
+							<div class="intro-excerpt">
+								<h1 style="color: #ffffff;">Reliable and Reasonably Priced Removalists in
+									Adelaide<span clsas="d-block"></span></h1>
+								<p style="color: #ffffff;" class="mb-4">For all of your relocation needs in
+									Adelaide, we
+									have
+									you covered.
+								</p>
+								<p><a href="{% url 'contact' %}" class="btn btn-secondary me-2">Get a Quote</a><a
+										target="_blank" href="tel:+61434653406" class="btn btn-secondary">Call Us
+										Now</a>
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="hero-img-wrap">
+								<!-- <video autoplay muted loop id="myVideo">
+					<source src= "{% static 'OG Movers and Packers.mp4'%} " type="video/mp4">
+					Your browser does not support HTML5 video.
+				  </video> -->
+								<!-- <img he src="{% static 'images/couch.png'%}" class="img-fluid"> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bgg">
+		
 			<div class="row justify-content-center">
 				<div class="col-md-6">
 					<div class="hero-img-wrap">
-						<h1 class="text-center">
-							<span class="text-primary font-weight-bold animated-text">From door to door, we’ve got
-								your move
-								covered with care and precision.</span>
-							<br>
-							<span class="text-success font-italic">Get a fast and free quote<br>Takes just 30
-								seconds</span>
-							<style>
-								/* Custom CSS for animation */
-								.animated-text {
-									animation: pulse 2s infinite;
-								}
-
-								@keyframes pulse {
-									0% {
-										transform: scale(1);
-									}
-
-									50% {
-										transform: scale(1.1);
-									}
-
-									100% {
-										transform: scale(1);
-									}
-								}
-							</style>
-						</h1>
 					</div>
 
 					<div class="my-element">
 						<form method="POST">
 							<h1 style="color: #000;">Get a Quote for Free</h1>
-
 
 							<div class="row">
 								<div class="col-6">
@@ -218,40 +231,9 @@
 					</div>
 					</form>
 				</div>
-
-				<div class="hero">
-					<div class="container">
-						<div class="row justify-content-between">
-							<div class="col-lg-5">
-								<div class="intro-excerpt">
-									<h1 style="color: #ffffff;">Reliable and Reasonably Priced Removalists in
-										Adelaide<span clsas="d-block"></span></h1>
-									<p style="color: #ffffff;" class="mb-4">For all of your relocation needs in
-										Adelaide, we
-										have
-										you covered.
-									</p>
-									<p><a href="{% url 'contact' %}" class="btn btn-secondary me-2">Get a Quote</a><a
-											target="_blank" href="tel:+61434653406" class="btn btn-secondary">Call Us
-											Now</a>
-									</p>
-								</div>
-							</div>
-							<div class="col-lg-7">
-								<div class="hero-img-wrap">
-									<!-- <video autoplay muted loop id="myVideo">
-							<source src= "{% static 'OG Movers and Packers.mp4'%} " type="video/mp4">
-							Your browser does not support HTML5 video.
-						  </video> -->
-									<!-- <img he src="{% static 'images/couch.png'%}" class="img-fluid"> -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
-		</div>
+	</div>
+</div>
 	</section>
 	<!-- Start Product Section -->
 	<style>
@@ -263,11 +245,11 @@
 			border: 2px solid #ccc;
 			/* Light grey border */
 			box-shadow: 3px 0 5px #aaa, -3px 0 5px #aaa;
-			/* 3D effect with left and right shadows */
 			padding: 10px;
 			/* Space inside the border */
-			background-color: #f9f9f9;
-			/* Light background color */
+			background-image: url('/static/images/bccg.jpeg');
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 
 		/* Adjustments for mobile devices */
@@ -319,7 +301,7 @@
 					<h1>This Season! Limited Time Offer: Premium Services for $49/HH</h1>
 				</span>
 				<p>Ready for a hassle-free move? This season, grab our unbeatable deal: professional home
-					removals for just <span class="price p-1 m-1">$49!</span> Whether you're relocating to a new house
+					removals for just <span class="price p-1 m-1">$49/HH</span> Whether you're relocating to a new house
 					or just need to shift things
 					around, our expert team ensures a smooth and efficient process, without breaking the bank.
 					With top-notch service and unbeatable value, this limited-time offer guarantees your move
@@ -345,10 +327,42 @@
 							href="https://api.whatsapp.com/send?phone=+61434653406&text=Hello%2C%20I%27m%20interested%20in%20your%20services."
 							class="btn">Contact Us</a></p>
 				</div><br>
-				<div id="dlr">
-					<h1 id="mainh1">Winter sale Limited time offer</h1><br>
+				<style>
+					.officer-text h1 {
+						margin-top: -5px;
+					}
+
+					.imgg {
+						margin-top: -65px;
+						margin-bottom: -55px;
+					}
+				</style>
+				<div class="text-center officer-text">
+					<h1 style="font-weight:900; color:rgb(0, 0, 0)">Book Now &</h1>
+					<h1 style="color:rgb(0, 0, 0);font-weight:900">Save</h1>
+					<!-- <h1 style="font-size: 8.875em; color:chocolate;font-weight:900">5%</h1> -->
 					<img class="responsive-imagess imgg" src="{% static 'images/dollor.png' %}" alt="">
+
+					<!-- <h1 class="price-on" style="font-size: 2.875em; color:chocolate;font-weight:900">on all prices</h1> -->
+
+
 				</div>
+				<div id="dlr">
+					<h3 class="h3">Don’t miss out on this exclusive offer to make your next move not only smoother but
+						also more affordable.
+						Enquire and book via SMS and <b>save 5%</b> on all the prices.</h3>
+					<a class="btn btn-success"
+						href="https://api.whatsapp.com/send?phone=+61434653406&text=Hello%2C%20I%27m%20interested%20in%20your%20services.">Book
+						Now</a>
+				</div>
+				<style>
+					.cbtn {
+						color: #000000;
+					}
+
+				</style>
+				<h2 class="cbtn price p-1 mt-5" style="text-align: center;">Our Pricing</h2>
+				<h5 class="cbtn p-1 m-1" style="text-align: center;">Fully Transparent Pricing with No Hidden Charges.</h5>
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="{% url 'contact' %}">
 						<div class="service-card" style="border: 1px solid #ccc; border-radius: 8px;">
@@ -383,7 +397,7 @@
 
 							</div>
 							<div class="service-footer">
-								<a href="{% url 'contact' %}" class="btn-book-now">Book Now</a>
+								<a href="{% url 'contact' %}" class="btn btn-warning">Book Now</a>
 							</div>
 						</div>
 					</a>
@@ -455,7 +469,7 @@
 
 							</div>
 							<div class="service-footer">
-								<a href="{% url 'contact' %}" class="btn-book-now">Book Now</a>
+								<a href="{% url 'contact' %}" class="btn btn-warning">Book Now</a>
 
 							</div>
 						</div>
@@ -501,7 +515,7 @@
 
 							</div>
 							<div class="service-footer">
-								<a href="{% url 'contact' %}" class="btn-book-now">Book Now</a>
+								<a href="{% url 'contact' %}" class="btn btn-warning">Book Now</a>
 							</div>
 						</div>
 
@@ -561,9 +575,9 @@
 			<div class="row justify-content-between">
 				<div class="col-lg-6">
 					<h2 class="section-title">Why Choose Us</h2>
-					<p>We're dedicated to seamless transitions, offering top-notch moving services with a
-						focus on
-						trust, professionalism, and customer satisfaction. Your journey, our priority</p>
+					<p>Hiring an expert removalist makes your move safe and simple, The experience matters a ton when the volume of things is huge. Doing it without an expert's guidance can increase the chances of damage to your items as well as poses a risk to your safety.
+						It is common to fall for cheap quotations and end up overpaying for the service. Make sure to confirm any hidden charges or callout fees before booking an expert removalist.
+						OG Movers assures that there are no undisclosed fees or expenses charged. Our pricing is fully transparent and we do not charge any Call-out or Stairs fees.</p>
 
 					<div class="row my-5">
 						<div class="col-6 col-md-6">
@@ -571,7 +585,7 @@
 								<div class="icon">
 									<img src="{% static 'images/truck.svg' %}" alt="Image" class="imf-fluid">
 								</div>
-								<h3>&amp; Residential Moving</h3>
+								<h3>Residential Moving</h3>
 								<p>Full household moving support, guaranteeing a seamless transfer to a new
 									residence.
 								</p>
@@ -607,7 +621,7 @@
 								<div class="icon">
 									<img src="{% static 'images/truck-front-fill.svg'%}" alt="Image" class="imf-fluid">
 								</div>
-								<h3>Open-minded pricing:</h3>
+								<h3>Transparent Pricing:</h3>
 								<p>No additional costs are incurred; you simply pay what we quote. After the
 									final
 									estimate, requesting further work may result in additional expenses...
@@ -1029,7 +1043,7 @@
 			<hr>
 			<h1 class="btn btn-dark h1s" onclick="toggleParagraph('service-details')">Our Services</a></h1>
 			<p id="service-details" style="display: none;">
-				We offer packing, transportation, unpacking, and storage solutions tailored to your needs.
+				We offer packing, transportation, unpacking solutions tailored to your needs.
 			</p>
 			<hr>
 
