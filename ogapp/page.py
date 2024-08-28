@@ -230,146 +230,149 @@ def text(params):
 """
     FAQ = """
     <div class="scriptarea">
-                <div class="faq-container">
-                    <script>
-                        function toggleParagraph(paragraphId) {
-                            const paragraph = document.getElementById(paragraphId);
-                            paragraph.style.display = paragraph.style.display === 'none' ? 'block' : 'none';
-                        }
+    <div class="faq-container">
+        <script>
+            function toggleParagraph(paragraphId) {
+                const paragraph = document.getElementById(paragraphId);
+                paragraph.style.display = paragraph.style.display === 'none' ? 'block' : 'none';
+            }
 
-                        // Hide all paragraphs initially
-                        document.addEventListener('DOMContentLoaded', function () {
-                            const allParagraphs = document.querySelectorAll('.p');
-                            allParagraphs.forEach(paragraph => {
-                                paragraph.style.display = 'none';
-                            });
-                        });
-                    </script>
-                    <style>
-                        .h1s:hover {
-                            color: rgb(47, 15, 205);
-                        }
+            // Hide all paragraphs initially
+            document.addEventListener('DOMContentLoaded', function () {
+                const allParagraphs = document.querySelectorAll('.p');
+                allParagraphs.forEach(paragraph => {
+                    paragraph.style.display = 'none';
+                });
+            });
+        </script>
+        <style>
+            .h1s:hover {
+                color: rgb(47, 15, 205);
+            }
 
-                        hr {
-                            border: none;
-                            border-top: 3px dotted #999;
-                            color: #020202;
-                            background-color: #fff;
-                            height: 1px;
-                        }
-                    </style>
-                    <h2>FAQs</h2>
+            hr {
+                border: none;
+                border-top: 3px dotted #999;
+                color: #020202;
+                background-color: #fff;
+                height: 1px;
+            }
+        </style>
+        <h2>FAQs</h2>
 
-                    <hr>
-                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service1')">1. What services does your moving
-                        company
-                        offer?
-                    </h2>
-                    <p id="service1" class="p">
-                        We offer a range of services including local and long-distance moving, packing and
-                        unpacking,
-                        furniture disassembly and reassembly, storage solutions, and more.
-                    </p>
-                    <hr>
+        <hr>
+        <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service1')">1. What is the recommended time frame
+            for booking a removalist in Adelaide?
+        </h2>
+        <p id="service1" class="p">
+            You can arrange same-day removalist service with us for no additional Charges. However, in general, book
+            your relocation 2-3 weeks in advance to ensure your preferred date. Booking early also boosts your chances
+            of obtaining discounts and comparing removalist services. If you're moving on a weekday or in the middle of
+            the month, you could have greater leeway with a short notice period.
+        </p>
+        <hr>
 
-                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service2')">2. How do I get a quote for my move?
-                    </h2>
-                    <p id="service2" class="p">
-                        You can get a free quote by filling out our online form, calling our customer service
-                        team, or
-                        scheduling an in-home estimate with one of our representatives.
-                    </p>
-                    <hr>
-                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service3')">3. Are your movers trained and insured?
-                    </h2>
-                    <p id="service3" class="p">
-                        Yes, all our movers are trained professionals who are fully licensed and insured to
-                        ensure the
-                        safety
-                        of your belongings during the move.
-                    </p>
-                    <hr>
-                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service4')">4. Do you provide packing materials,
-                        and
-                        can I
-                        pack my own items?</h2>
-                    <p id="service4" class="p">
-                        We offer high-quality packing materials for purchase. You can choose to pack your own
-                        items or
-                        opt
-                        for our professional packing services for added convenience.
-                    </p>
-                    <hr>
+        <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service2')">2. What are the payment methods for your
+            removalist service? Is an advance payment required?
+        </h2>
+        <p id="service2" class="p">
+            We offer easy payment methods for our removalist services, such as online bank transfers and cash. To
+            reserve your spot in our timetable, we ask for a 10% to 15% deposit. The decision to pay this advance is
+            totally up to you. Paying this amount will guarantee your reservation and provide you piece of mind. It also
+            allows us to organize your move more efficiently and cost-effectively. This price is included in the whole
+            cost, making your moving day less financially burdensome. By committing to this upfront price, we can focus
+            on providing you with high-quality, hassle-free moving services.
+        </p>
+        <hr>
+        <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service3')">3. Do I have to pay more for weekend
+            bookings?
+        </h2>
+        <p id="service3" class="p">
+            Definitely not! We understand that your week might be full, and weekends may be your only free time. That is
+            why we not only do not charge extra for weekend bookings, but also provide a 5% discount on all weekend
+            moves. It's our way of respecting your hectic schedule and making your relocation as simple and economical
+            as possible. Trust us; we're here to help you, not add to your bills. So go ahead and schedule your
+            relocation whenever it works best for you; we've got you covered.
+        </p>
+        <hr>
+        <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service4')">4.Do you offer insurance for your moving
+            services? What protections does it provide?
+        </h2>
+        <p id="service4" class="p">
+            Our removalist service is completely insured to provide you peace of mind. Our insurance covers any
+            unexpected accidents that may occur during the moving process, including damage or loss of your belongings
+            while in transit. For additional details on what is and is not covered, please consult our summary insurance
+            policy or contact our customer service team, who will gladly assist you with any queries about our insurance
+            coverage.
+        </p>
+        <hr>
 
 
-                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service5')">5. What should I do to prepare for
-                        moving
-                        day?
-                    </h2>
-                    <p id="service5" class="p">
-                        We recommend decluttering and organizing your belongings beforehand. Ensure all boxes
-                        are
-                        labeled
-                        clearly, and provide any special instructions to our team for fragile or valuable items.
-                    </p>
-                    <hr>
+        <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service5')">5.How safe is your packaging services?
+        </h2>
+        <p id="service5" class="p">
+            OG Movers employs a team of removalists who specialize in packaging everything you own. We utilize
+            high-quality packing materials to ensure the safety of your goods. We are legal, thus we adhere to all
+            quality and safety standards to provide you with the best packing services in Adelaide.
+        </p>
+        <hr>
 
-                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service6')">6. Do you offer storage options if my
-                        new
-                        home
-                        isn’t ready yet?</h2>
-                    <p id="service6" class="p">
-                        Yes, we provide short-term and long-term storage solutions in our secure facilities to
-                        accommodate
-                        your needs until your new home is ready for move-in.
-                    </p>
-                    <hr>
-                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service7')">7. Can you handle specialty items such
-                        as
-                        pianos,
-                        antiques, or large appliances?</h2>
-                    <p id="service7" class="p">
-                        Absolutely, our movers are trained to handle specialty items with care. Please inform us
-                        in
-                        advance
-                        so we can make appropriate arrangements.
-                    </p>
-                    <hr>
+        <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service6')">6. What happens if my belongings are
+            damaged during the move?</h2>
+        <p id="service6" class="p">
+            In case you dicover any damage or loss, properly document it, take clear photographs showing the damage and
+            notify us within 24 hours. <br><br>
 
-                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service8')">8. What happens if my belongings are
-                        damaged
-                        during the move?</h2>
-                    <p id="service8" class="p">
-                        While we take every precaution to ensure a safe move, in the rare event of damage, we
-                        have a
-                        claims
-                        process in place. Our customer service team will assist you through the process.
-                    </p>
-                    <hr>
+            We will properly review your claim and initiate the claiming process.
+            If the claim is approved, Our insurance policy will determine the compensation that will be provided. This
+            may include repair, replacement, or financial compensation, depending on the extent and nature of the damage
+            or loss.
+        </p>
+        <hr>
+        <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service7')">7. What is your policy if I need to
+            cancel my booking?</h2>
+        <p id="service7" class="p">
+            We are aware that unforeseen changes can occasionally occur to plans. We have a flexible cancellation policy
+            as a result. Up to 24 hours prior to the day of your planned move, you may cancel your reservation. If you
+            have already made a deposit, we will immediately return the full amount to you. However, you might not
+            receive your entire refund if you cancel less than 24 hours before the transfer. We are grateful for your
+            comprehension.
+        </p>
+        <hr>
 
-                    <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service9')">9. How far in advance should I schedule
-                        my
-                        move?
-                    </h2>
-                    <p id="service9" class="p">
-                        It’s best to schedule your move as soon as you have a confirmed moving date, especially
-                        during
-                        peak
-                        seasons like summer. This helps ensure availability and allows time for proper planning.
-                    </p>
-                    <hr>
-                    <h2 class="btn h1s" onclick="toggleParagraph('service10')">10. Do you offer moving services on
-                        weekends and
-                        holidays?
-                    </h2>
-                    <p id="service10" class="p">
-                        Yes, we offer moving services seven days a week, including weekends and holidays, to
-                        accommodate
-                        your schedule and make your move as convenient as possible.
-                    </p>
-                    <hr>
+        <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service8')">8. What should I do to prepare for moving
+            day?</h2>
+        <p id="service8" class="p">
+            It is advisable to arrange and tidy up your possessions in advance. Make sure every box has a clear label,
+            and let our staff know if there are any particular instructions for fragile or expensive items.
+        </p>
+        <hr>
 
-                </div>
+        <h2 class="btn outline-dark h1s" onclick="toggleParagraph('service9')">9. Are there any hidden fees associated
+            with your services?
+        </h2>
+        <p id="service9" class="p">
+            Our services are intended to be clear-cut, uncomplicated, and free of any additional costs. You will receive
+            transparent pricing that is devoid of any surprises. Since we value simplicity and honesty, we make sure you
+            are fully aware of all charges before committing. Please get in touch with us if you have any questions
+            about our prices; we're happy to assist you!
+
+            <b>No Call-out fee <br>
+                No Stairs fee</b>
+        </p>
+        <hr>
+        <h2 class="btn h1s" onclick="toggleParagraph('service10')">10. Do you provide same-day removals services?
+
+        </h2>
+        <p id="service10" class="p">
+            Indeed, we can accommodate your pressing demands with same-day removal services with no extra charges. Even
+            at short notice, your belongings will be handled with professionalism and care thanks to the prompt and
+            effective solutions our staff is committed to offering. Please get in touch with us if you need help right
+            away, and we'll try our best to assist you.
+        </p>
+        <hr>
+
+    </div>
     
     """
     about = """
@@ -396,6 +399,61 @@ def text(params):
         <p>Thank you for considering OG Movers for your moving needs. We look forward to making your next move a hassle-free experience. Contact us today for a quote or to discuss how we can assist you!</p>
         <p>Let us help you move with confidence!</p>
     """
+    insurance = '''
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #0074D9;
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Insurance Policy</h1>
+    <p>We recognize the importance of safeguarding your belongings during moving at OG Movers. While we handle each item carefully, we understand that accidents and unforeseen incidents can occur. We offer full insurance coverage for your items while in transit to provide peace of mind. This policy outlines the terms and conditions of our coverage.</p>
+
+    <h2>Policy Coverage</h2>
+    <p>Our full insurance cover applies from the moment we start packing and moving your items until they are delivered and unpacked at your new location. It covers damages or losses incurred during:</p>
+    <ul>
+        <li>Packing and unpacking by our professional removalists.</li>
+        <li>Transit between your old and new location.</li>
+    </ul>
+
+    <h2>Claim Procedure</h2>
+    <p><strong>Damage Discovery:</strong> In case you discover any damage or loss, promptly document it. Take clear photographs showing the damage.</p>
+    <p><strong>Damage Report:</strong> Notify us within 24 hours of delivery completion. Please email us detailing the damage or loss, including the photographs taken and any additional information that can help us understand the issue better.</p>
+    <p><strong>Claim Submission:</strong> We will properly review your claim and initiate the claim process with our insurance company. We will provide you with a unique claim number for future correspondence and tracking purposes.</p>
+    <p><strong>Claim Assessment:</strong> Our insurance company will assess the claim, which may include an examination of the damaged items, their original condition, and their market value at the time of loss or damage.</p>
+    <p><strong>Claim Approval and Compensation:</strong> If the claim is approved, our insurance policy will determine the compensation that will be provided. This may include repair, replacement, or financial compensation, depending on the extent and nature of the damage or loss.</p>
+
+    <h2>Exclusions</h2>
+    <p>Please note that certain items and circumstances are not covered by our insurance policy, such as:</p>
+    <ul>
+        <li>Items packed by customers.</li>
+        <li>Pre-existing damage or faults.</li>
+        <li>Valuables such as jewelry, money, important documents, etc., unless previously agreed upon and declared.</li>
+        <li>Damage or loss due to natural disasters or circumstances beyond our control.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>For more information regarding our insurance policy or the claims process, our customer service team is ready to assist you.</p>
+
+    <p>Let us help you move with confidence! 📦🚚</p>
+    '''
     error = "Not Found"
     if params == "Service-Residential-Moving":
         return text1
@@ -413,5 +471,7 @@ def text(params):
         return FAQ
     elif params == "ABOUT":
         return about
+    elif params == "insurance-policy":
+        return insurance
     else:
         return error

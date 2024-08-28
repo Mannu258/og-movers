@@ -1126,3 +1126,8 @@ body {
   background-color: #f9f9f9;
   color: #ffffff;
 }
+#background-img {
+  background-image: url('../images/Background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
