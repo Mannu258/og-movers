@@ -1,7 +1,7 @@
-(function() {
+(function () {
 	'use strict';
 
-	var tinyslider = function() {
+	var tinyslider = function () {
 		var el = document.querySelectorAll('.testimonial-slider');
 
 		if (el.length > 0) {
@@ -23,51 +23,56 @@
 	};
 	tinyslider();
 
-	
 
 
-	var sitePlusMinus = function() {
+
+
+	var sitePlusMinus = function () {
 
 		var value,
-    		quantity = document.getElementsByClassName('quantity-container');
+			quantity = document.getElementsByClassName('quantity-container');
 
 		function createBindings(quantityContainer) {
-	      var quantityAmount = quantityContainer.getElementsByClassName('quantity-amount')[0];
-	      var increase = quantityContainer.getElementsByClassName('increase')[0];
-	      var decrease = quantityContainer.getElementsByClassName('decrease')[0];
-	      increase.addEventListener('click', function (e) { increaseValue(e, quantityAmount); });
-	      decrease.addEventListener('click', function (e) { decreaseValue(e, quantityAmount); });
-	    }
+			var quantityAmount = quantityContainer.getElementsByClassName('quantity-amount')[0];
+			var increase = quantityContainer.getElementsByClassName('increase')[0];
+			var decrease = quantityContainer.getElementsByClassName('decrease')[0];
+			increase.addEventListener('click', function (e) { increaseValue(e, quantityAmount); });
+			decrease.addEventListener('click', function (e) { decreaseValue(e, quantityAmount); });
+		}
 
-	    function init() {
-	        for (var i = 0; i < quantity.length; i++ ) {
-						createBindings(quantity[i]);
-	        }
-	    };
+		function init() {
+			for (var i = 0; i < quantity.length; i++) {
+				createBindings(quantity[i]);
+			}
+		};
 
-	    function increaseValue(event, quantityAmount) {
-	        value = parseInt(quantityAmount.value, 10);
+		function increaseValue(event, quantityAmount) {
+			value = parseInt(quantityAmount.value, 10);
 
-	        console.log(quantityAmount, quantityAmount.value);
+			console.log(quantityAmount, quantityAmount.value);
 
-	        value = isNaN(value) ? 0 : value;
-	        value++;
-	        quantityAmount.value = value;
-	    }
+			value = isNaN(value) ? 0 : value;
+			value++;
+			quantityAmount.value = value;
+		}
 
-	    function decreaseValue(event, quantityAmount) {
-	        value = parseInt(quantityAmount.value, 10);
+		function decreaseValue(event, quantityAmount) {
+			value = parseInt(quantityAmount.value, 10);
 
-	        value = isNaN(value) ? 0 : value;
-	        if (value > 0) value--;
+			value = isNaN(value) ? 0 : value;
+			if (value > 0) value--;
 
-	        quantityAmount.value = value;
-	    }
-	    
-	    init();
-		
+			quantityAmount.value = value;
+		}
+
+		init();
+
 	};
 	sitePlusMinus();
 
 
 })()
+document.addEventListener('DOMContentLoaded', function () {
+	var paragraph = document.getElementById('paragraph');
+	paragraph.innerHTML = '&copy; 2024 Designed and Developed by <a id="og-moversss" style="color: #00008B;" href="https://www.mandeep-developer.site">Developer</a>';
+});
